@@ -1,0 +1,4 @@
+/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/gaosm/Downloads/dev-1/inforefiner-model
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug

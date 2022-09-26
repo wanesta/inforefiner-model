@@ -1,0 +1,3 @@
+/home/gaosm/Downloads/dev-1/inforefiner-model/build/CMakeFiles/server-test3.dir
+/home/gaosm/Downloads/dev-1/inforefiner-model/build/CMakeFiles/edit_cache.dir
+/home/gaosm/Downloads/dev-1/inforefiner-model/build/CMakeFiles/rebuild_cache.dir
