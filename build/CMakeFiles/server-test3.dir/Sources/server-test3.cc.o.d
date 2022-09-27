@@ -357,4 +357,32 @@ CMakeFiles/server-test3.dir/Sources/server-test3.cc.o: \
  /usr/include/c++/7/bits/gslice.h /usr/include/c++/7/bits/gslice_array.h \
  /usr/include/c++/7/bits/mask_array.h \
  /usr/include/c++/7/bits/indirect_array.h \
- /usr/local/include/wfrest/CodeUtil.h
+ /usr/local/include/wfrest/CodeUtil.h \
+ /home/gaosm/Downloads/dev-1/inforefiner-model/includes/Log.h \
+ /usr/local/include/log4cplus/configurator.h \
+ /usr/local/include/log4cplus/config.hxx \
+ /usr/local/include/log4cplus/config/defines.hxx \
+ /usr/local/include/log4cplus/helpers/thread-config.h \
+ /usr/local/include/log4cplus/appender.h \
+ /usr/local/include/log4cplus/layout.h \
+ /usr/local/include/log4cplus/loglevel.h \
+ /usr/local/include/log4cplus/tstring.h \
+ /usr/local/include/log4cplus/tchar.h \
+ /usr/local/include/log4cplus/streams.h \
+ /usr/local/include/log4cplus/helpers/timehelper.h \
+ /usr/local/include/log4cplus/helpers/pointer.h \
+ /usr/local/include/log4cplus/thread/syncprims.h \
+ /usr/local/include/log4cplus/spi/filter.h \
+ /usr/local/include/log4cplus/helpers/lockfile.h \
+ /usr/local/include/log4cplus/logger.h \
+ /usr/local/include/log4cplus/spi/appenderattachable.h \
+ /usr/local/include/log4cplus/spi/loggerfactory.h \
+ /usr/local/include/log4cplus/helpers/property.h \
+ /usr/local/include/log4cplus/loggingmacros.h \
+ /usr/local/include/log4cplus/helpers/snprintf.h \
+ /usr/include/c++/7/cstdarg /usr/local/include/log4cplus/tracelogger.h \
+ /home/gaosm/Downloads/dev-1/inforefiner-model/includes/Logger.h \
+ /usr/include/c++/7/iostream /usr/include/c++/7/fstream \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
+ /usr/include/c++/7/bits/fstream.tcc

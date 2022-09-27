@@ -125,8 +125,7 @@ void test1(const httplib::Request &req, httplib::Response &res)
     // }
     //std::map<std::string, int> c_map{{"one", 1}, {"two", 2}, {"three", 3}};
 
-    try
-    {
+    try{
         nlohmann::json js(req.params);
         // nlohmann::json j = nlohmann::json::parse(js);
 

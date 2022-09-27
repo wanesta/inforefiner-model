@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -fPIC -pipe -std=c++11 -fno-exceptions CMakeFiles/server-test3.dir/Sources/server-test3.cc.o -o bin/server-test3   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lpthread -lwfrest 
+/usr/bin/c++  -Wall -fPIC -pipe -std=c++11 -fno-exceptions CMakeFiles/server-test3.dir/Sources/server-test3.cc.o -o bin/server-test3   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lpthread -lwfrest -llog4cplus 

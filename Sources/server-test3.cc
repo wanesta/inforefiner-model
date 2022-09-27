@@ -6,6 +6,7 @@
 #include "wfrest/HttpServer.h"
 #include "wfrest/json.hpp"
 #include "wfrest/CodeUtil.h"
+#include "Log.h"
 using namespace wfrest;
 using Json = nlohmann::json;
 
@@ -54,11 +55,13 @@ int main()
         };
         if (req->content_type() != APPLICATION_JSON){
             resp->String("NOT APPLICATION_JSON");
+            LOG_ERROR("");
             return;
         }
+        LOG_INFO(j2);
         resp->Json(j2);
         resp->String("\n  aa a a   \n");
-        fprintf(stderr, "Json : %s", req->json().dump(4).c_str());
+        fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
     });
 
     if (svr.start("0.0.0.0",8888) == 0){

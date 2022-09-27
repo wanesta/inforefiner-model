@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.22)
 project(inforefiner-model)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CXX_FLAGS
-        -Wall
-        -std=c++14
-        -lpthread
-        -Wno-unused-parameter
-        -03
-        )
+#set(CXX_FLAGS
+#        -Wall
+#        -std=c++14
+#        -lpthread
+#        -Wno-unused-parameter
+#        -03
+#        )
 link_libraries(pthread)
 include_directories("includes")
 find_package(OpenSSL REQUIRED)
@@ -34,4 +34,4 @@ endif ()
 #add_executable(client Sources/client-test.cc ${INCLUDES})
 #add_executable(server-test2 Sources/server-test2.cc ${INCLUDES})
 add_executable(server-test3 Sources/server-test3.cc)
-target_link_libraries(server-test3 ${WFREST_LIB})
+target_link_libraries(server-test3 ${WFREST_LIB} log4cplus)
