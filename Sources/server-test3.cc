@@ -37,8 +37,10 @@ int main()
     //   curl -X POST http://0.0.0.0:8888/json4 -H 'Content-Type: application/json' -d '{"login":"inforefiner-model","password":"inforfiner_password"}'
     svr.POST("/json4", [](const HttpReq *req, HttpResp *resp){
         Json json;
-        json["test"] = 123;
-        json["aaa"] = "test josn";
+        int N = 967;
+        float random = rand() % (N + 1) / (float)(N + 1);
+        json["result"] = random;
+        //json["aaa"] = "test josn";
         Json j2 = {
                 {"pi", 3.141},
                 {"happy", true},
@@ -59,8 +61,8 @@ int main()
             return;
         }
         LOG_INFO(j2);
-        resp->Json(j2);
-        resp->String("\n  aa a a   \n");
+        resp->Json(json);
+        //resp->String("\n  aa a a   \n");
         fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
     });
 
