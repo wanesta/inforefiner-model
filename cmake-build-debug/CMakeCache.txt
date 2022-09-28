@@ -244,27 +244,6 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
-//The directory containing a CMake configuration file for Workflow.
-Workflow_DIR:PATH=/usr/local/lib/cmake/workflow
-
-//Value Computed by CMake
-cpp_httplib_test_BINARY_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug
-
-//Value Computed by CMake
-cpp_httplib_test_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-cpp_httplib_test_SOURCE_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model
-
-//Value Computed by CMake
-infore_BINARY_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug
-
-//Value Computed by CMake
-infore_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-infore_SOURCE_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model
-
 //Value Computed by CMake
 inforefiner-model_BINARY_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug
 
@@ -274,14 +253,8 @@ inforefiner-model_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 inforefiner-model_SOURCE_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model
 
-//Value Computed by CMake
-inforefiner_BINARY_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug
-
-//Value Computed by CMake
-inforefiner_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-inforefiner_SOURCE_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model
+//Path to a library.
+libpath:FILEPATH=libpath-NOTFOUND
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -408,7 +381,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

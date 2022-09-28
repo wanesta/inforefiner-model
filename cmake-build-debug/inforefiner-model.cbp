@@ -5,7 +5,7 @@
 		<Option title="inforefiner-model"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\wfrest\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\workflow\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\wfrest\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\workflow\;CMake Files\LogLib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug"/>
@@ -24,8 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/includes"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -49,8 +48,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/includes"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -87,7 +85,113 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Slog_static">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/libSlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 Slog_static"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Slog_static/fast">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/libSlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 Slog_static/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Slog">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/libSlog.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 Slog"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Slog/fast">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/libSlog.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 Slog/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc">
+			<Option target="server-test3"/>
+			<Option target="Slog_static"/>
+			<Option target="Slog"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.h">
+			<Option target="server-test3"/>
+			<Option target="Slog_static"/>
+			<Option target="Slog"/>
+		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc">
 			<Option target="server-test3"/>
 		</Unit>
@@ -102,6 +206,9 @@
 		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/../../../../../usr/local/lib/cmake/workflow/workflow-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\workflow\"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\LogLib\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

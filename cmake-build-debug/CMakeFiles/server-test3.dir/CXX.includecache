@@ -6,27 +6,37 @@
 
 #IncludeRegexTransform: 
 
-../includes/Log.h
-log4cplus/configurator.h
+../LogLib/Slog.h
+
+/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc
+Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.h
+stdio.h
+-
+log4cplus/logger.h
 -
 log4cplus/loggingmacros.h
 -
-log4cplus/loglevel.h
+log4cplus/consoleappender.h
 -
-Logger.h
-../includes/Logger.h
+log4cplus/config.hxx
+-
+log4cplus/logger.h
+-
+log4cplus/configurator.h
+-
+log4cplus/helpers/loglog.h
+-
+log4cplus/helpers/stringhelper.h
+-
+log4cplus/helpers/socket.h
+-
+log4cplus/spi/loggerimpl.h
+-
+log4cplus/spi/loggingevent.h
+-
 
-../includes/Logger.h
-string
--
-map
--
-iostream
--
-fstream
--
-sstream
--
+/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.h
 
 /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc
 workflow/WFFacilities.h
@@ -39,6 +49,6 @@ wfrest/json.hpp
 /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/wfrest/json.hpp
 wfrest/CodeUtil.h
 /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/wfrest/CodeUtil.h
-Log.h
-/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/Log.h
+Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/Slog.h
 

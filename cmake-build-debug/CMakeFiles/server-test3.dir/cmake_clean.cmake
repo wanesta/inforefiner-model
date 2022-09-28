@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server-test3.dir/LogLib/Slog.cc.o"
   "CMakeFiles/server-test3.dir/Sources/server-test3.cc.o"
   "bin/server-test3"
   "bin/server-test3.pdb"

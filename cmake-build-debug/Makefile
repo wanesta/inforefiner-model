@@ -129,6 +129,56 @@ server-test3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/build
 .PHONY : server-test3/fast
 
+#=============================================================================
+# Target rules for targets named Slog_static
+
+# Build rule for target.
+Slog_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Slog_static
+.PHONY : Slog_static
+
+# fast build rule for target.
+Slog_static/fast:
+	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog_static.dir/build.make LOGLIB/CMakeFiles/Slog_static.dir/build
+.PHONY : Slog_static/fast
+
+#=============================================================================
+# Target rules for targets named Slog
+
+# Build rule for target.
+Slog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Slog
+.PHONY : Slog
+
+# fast build rule for target.
+Slog/fast:
+	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog.dir/build.make LOGLIB/CMakeFiles/Slog.dir/build
+.PHONY : Slog/fast
+
+LogLib/Slog.o: LogLib/Slog.cc.o
+.PHONY : LogLib/Slog.o
+
+# target to build an object file
+LogLib/Slog.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.o
+.PHONY : LogLib/Slog.cc.o
+
+LogLib/Slog.i: LogLib/Slog.cc.i
+.PHONY : LogLib/Slog.i
+
+# target to preprocess a source file
+LogLib/Slog.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.i
+.PHONY : LogLib/Slog.cc.i
+
+LogLib/Slog.s: LogLib/Slog.cc.s
+.PHONY : LogLib/Slog.s
+
+# target to generate assembly for a file
+LogLib/Slog.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.s
+.PHONY : LogLib/Slog.cc.s
+
 Sources/server-test3.o: Sources/server-test3.cc.o
 .PHONY : Sources/server-test3.o
 
@@ -161,7 +211,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Slog"
+	@echo "... Slog_static"
 	@echo "... server-test3"
+	@echo "... LogLib/Slog.o"
+	@echo "... LogLib/Slog.i"
+	@echo "... LogLib/Slog.s"
 	@echo "... Sources/server-test3.o"
 	@echo "... Sources/server-test3.i"
 	@echo "... Sources/server-test3.s"

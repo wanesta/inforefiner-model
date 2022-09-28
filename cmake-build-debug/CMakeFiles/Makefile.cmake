@@ -32,6 +32,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/gaosm/Downloads/cmake-3.22.1/Modules/Platform/UnixPaths.cmake"
   "/home/gaosm/Downloads/cmake-3.22.1/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
+  "../LogLib/CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
@@ -49,9 +50,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "LOGLIB/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/server-test3.dir/DependInfo.cmake"
+  "LOGLIB/CMakeFiles/Slog_static.dir/DependInfo.cmake"
+  "LOGLIB/CMakeFiles/Slog.dir/DependInfo.cmake"
   )

@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -fPIC -pipe -std=c++11 -fno-exceptions -g CMakeFiles/client.dir/Sources/client-test.cc.o -o bin/client   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lpthread 

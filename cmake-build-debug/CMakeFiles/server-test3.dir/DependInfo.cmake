@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc" "/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles/server-test3.dir/LogLib/Slog.cc.o"
   "/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc" "/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles/server-test3.dir/Sources/server-test3.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../includes"
-  "."
+  "../LogLib"
   )
 
 # The set of dependency files which are needed:

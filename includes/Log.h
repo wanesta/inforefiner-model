@@ -13,7 +13,7 @@
 #include <log4cplus/loggingmacros.h>
 #include <log4cplus/loglevel.h>
 #include "Logger.h"
-
+#include "Slog.h"
 //#define g_log4_logger  log4cplus::Logger::getRoot()
 #define g_log4_logger  log4cplus::Logger::getInstance("root")
 
@@ -27,7 +27,7 @@
 
 inline void log_init(Logger * logger)
 {
-    std::string log_path = "../config/log4cplus.properties";
+    std::string log_path = "../../config/log4cplus.properties";
     log_path = logger->Read("log_config_path", log_path);
     log4cplus::initialize();
     log4cplus::PropertyConfigurator::doConfigure(log_path);

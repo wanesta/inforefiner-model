@@ -6,7 +6,9 @@
 #include "wfrest/HttpServer.h"
 #include "wfrest/json.hpp"
 #include "wfrest/CodeUtil.h"
-#include "Log.h"
+//#include "log.h"
+#include "Slog.h"
+
 using namespace wfrest;
 using Json = nlohmann::json;
 
@@ -22,7 +24,7 @@ int main()
     signal(SIGINT, sig_handler);
 
     HttpServer svr;
-
+    Log.init("/home/gaosm/Downloads/dev-1/inforefiner-model/config/slog.properties");
     // curl -v http://0.0.0.0:8888/json3
     svr.GET("/json3", [](const HttpReq *req, HttpResp *resp){
         std::string invalid_text = R"(
@@ -55,18 +57,26 @@ int main()
                              {"value", 42.99}
                        }}
         };
+        std::string str = to_string(j2);
+        Log.Info("json string : %s", str.c_str());
         if (req->content_type() != APPLICATION_JSON){
             resp->String("NOT APPLICATION_JSON");
-            LOG_ERROR("");
+            Log.Error("asdfasdf");
+            Log.Debug("Debug log[%d]", 10000);
+            //LOG_INFO("server start ip : " << addr << " port : " << port);
+            //Log.Error("Debug log[%d]", 10000);
+            //Log.Fatal("Debug log[%d]", 10000);
             return;
         }
-        LOG_INFO(j2);
         resp->Json(json);
         //resp->String("\n  aa a a   \n");
         fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
     });
-
-    if (svr.start("0.0.0.0",8888) == 0){
+    //Log.Info("Debug log[%s]", 10000);
+    const char *addr = "0.0.0.0";
+    int port = 8888;
+    if (svr.start(addr,port) == 0){
+        Log.Info("server start ip : %s port : %d",addr,port);
         wait_group.wait();
         svr.stop();
     } else {
