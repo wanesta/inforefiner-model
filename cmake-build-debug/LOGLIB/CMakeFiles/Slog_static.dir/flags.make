@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib
+CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/Lib
 
 CXX_FLAGS =  -Wall -fPIC -pipe -std=c++11 -fno-exceptions -g
 

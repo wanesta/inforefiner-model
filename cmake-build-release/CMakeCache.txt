@@ -244,6 +244,9 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
+//The directory containing a CMake configuration file for Slog.
+Slog_DIR:PATH=Slog_DIR-NOTFOUND
+
 //Value Computed by CMake
 inforefiner-model_BINARY_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release
 
@@ -252,6 +255,12 @@ inforefiner-model_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 inforefiner-model_SOURCE_DIR:STATIC=/home/gaosm/Downloads/dev-1/inforefiner-model
+
+//Path to a file.
+libp:PATH=/home/gaosm/Downloads/dev-1/inforefiner-model/Lib
+
+//Path to a library.
+libpath:FILEPATH=libpath-NOTFOUND
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so

@@ -6,7 +6,37 @@
 
 #IncludeRegexTransform: 
 
-../LogLib/Slog.h
+../Lib/Slog.h
+
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc
+Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.h
+stdio.h
+-
+log4cplus/logger.h
+-
+log4cplus/loggingmacros.h
+-
+log4cplus/consoleappender.h
+-
+log4cplus/config.hxx
+-
+log4cplus/logger.h
+-
+log4cplus/configurator.h
+-
+log4cplus/helpers/loglog.h
+-
+log4cplus/helpers/stringhelper.h
+-
+log4cplus/helpers/socket.h
+-
+log4cplus/spi/loggerimpl.h
+-
+log4cplus/spi/loggingevent.h
+-
+
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.h
 
 /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc
 workflow/WFFacilities.h

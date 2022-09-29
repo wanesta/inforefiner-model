@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc
 Slog.h
-/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.h
 stdio.h
 -
 log4cplus/logger.h
@@ -34,5 +34,5 @@ log4cplus/spi/loggerimpl.h
 log4cplus/spi/loggingevent.h
 -
 
-/home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.h
 

@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/gaosm/Downloads/cmake-3.22.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug//CMakeFiles/progress.marks
@@ -139,7 +184,7 @@ Slog_static: cmake_check_build_system
 
 # fast build rule for target.
 Slog_static/fast:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog_static.dir/build.make LOGLIB/CMakeFiles/Slog_static.dir/build
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog_static.dir/build.make Lib/CMakeFiles/Slog_static.dir/build
 .PHONY : Slog_static/fast
 
 #=============================================================================
@@ -152,32 +197,32 @@ Slog: cmake_check_build_system
 
 # fast build rule for target.
 Slog/fast:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog.dir/build.make LOGLIB/CMakeFiles/Slog.dir/build
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog.dir/build.make Lib/CMakeFiles/Slog.dir/build
 .PHONY : Slog/fast
 
-LogLib/Slog.o: LogLib/Slog.cc.o
-.PHONY : LogLib/Slog.o
+Lib/Slog.o: Lib/Slog.cc.o
+.PHONY : Lib/Slog.o
 
 # target to build an object file
-LogLib/Slog.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.o
-.PHONY : LogLib/Slog.cc.o
+Lib/Slog.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Lib/Slog.cc.o
+.PHONY : Lib/Slog.cc.o
 
-LogLib/Slog.i: LogLib/Slog.cc.i
-.PHONY : LogLib/Slog.i
+Lib/Slog.i: Lib/Slog.cc.i
+.PHONY : Lib/Slog.i
 
 # target to preprocess a source file
-LogLib/Slog.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.i
-.PHONY : LogLib/Slog.cc.i
+Lib/Slog.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Lib/Slog.cc.i
+.PHONY : Lib/Slog.cc.i
 
-LogLib/Slog.s: LogLib/Slog.cc.s
-.PHONY : LogLib/Slog.s
+Lib/Slog.s: Lib/Slog.cc.s
+.PHONY : Lib/Slog.s
 
 # target to generate assembly for a file
-LogLib/Slog.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/LogLib/Slog.cc.s
-.PHONY : LogLib/Slog.cc.s
+Lib/Slog.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Lib/Slog.cc.s
+.PHONY : Lib/Slog.cc.s
 
 Sources/server-test3.o: Sources/server-test3.cc.o
 .PHONY : Sources/server-test3.o
@@ -210,13 +255,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Slog"
 	@echo "... Slog_static"
 	@echo "... server-test3"
-	@echo "... LogLib/Slog.o"
-	@echo "... LogLib/Slog.i"
-	@echo "... LogLib/Slog.s"
+	@echo "... Lib/Slog.o"
+	@echo "... Lib/Slog.i"
+	@echo "... Lib/Slog.s"
 	@echo "... Sources/server-test3.o"
 	@echo "... Sources/server-test3.i"
 	@echo "... Sources/server-test3.s"

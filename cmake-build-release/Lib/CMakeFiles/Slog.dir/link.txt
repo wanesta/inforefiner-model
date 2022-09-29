@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -fPIC -pipe -std=c++11 -fno-exceptions -O3 -DNDEBUG -shared -Wl,-soname,libSlog.so -o libSlog.so CMakeFiles/Slog.dir/Slog.cc.o  -lpthread 

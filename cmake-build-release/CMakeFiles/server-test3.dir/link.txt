@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fPIC -pipe -std=c++11 -fno-exceptions -O3 -DNDEBUG CMakeFiles/server-test3.dir/Sources/server-test3.cc.o CMakeFiles/server-test3.dir/Lib/Slog.cc.o -o bin/server-test3   -L/home/gaosm/Downloads/dev-1/inforefiner-model/Lib  -Wl,-rpath,/home/gaosm/Downloads/dev-1/inforefiner-model/Lib -lpthread -lwfrest -llog4cplus 

@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/cmake_install.cmake")
+  include("/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/Lib/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

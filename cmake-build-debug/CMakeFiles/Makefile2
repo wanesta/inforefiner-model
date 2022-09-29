@@ -64,34 +64,34 @@ CMAKE_BINARY_DIR = /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-deb
 
 # The main recursive "all" target.
 all: CMakeFiles/server-test3.dir/all
-all: LOGLIB/all
+all: Lib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: LOGLIB/preinstall
+preinstall: Lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/server-test3.dir/clean
-clean: LOGLIB/clean
+clean: Lib/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory LOGLIB
+# Directory level rules for directory Lib
 
 # Recursive "all" directory target.
-LOGLIB/all: LOGLIB/CMakeFiles/Slog_static.dir/all
-LOGLIB/all: LOGLIB/CMakeFiles/Slog.dir/all
-.PHONY : LOGLIB/all
+Lib/all: Lib/CMakeFiles/Slog_static.dir/all
+Lib/all: Lib/CMakeFiles/Slog.dir/all
+.PHONY : Lib/all
 
 # Recursive "preinstall" directory target.
-LOGLIB/preinstall:
-.PHONY : LOGLIB/preinstall
+Lib/preinstall:
+.PHONY : Lib/preinstall
 
 # Recursive "clean" directory target.
-LOGLIB/clean: LOGLIB/CMakeFiles/Slog_static.dir/clean
-LOGLIB/clean: LOGLIB/CMakeFiles/Slog.dir/clean
-.PHONY : LOGLIB/clean
+Lib/clean: Lib/CMakeFiles/Slog_static.dir/clean
+Lib/clean: Lib/CMakeFiles/Slog.dir/clean
+.PHONY : Lib/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/server-test3.dir
@@ -120,56 +120,56 @@ CMakeFiles/server-test3.dir/clean:
 .PHONY : CMakeFiles/server-test3.dir/clean
 
 #=============================================================================
-# Target rules for target LOGLIB/CMakeFiles/Slog_static.dir
+# Target rules for target Lib/CMakeFiles/Slog_static.dir
 
 # All Build rule for target.
-LOGLIB/CMakeFiles/Slog_static.dir/all:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog_static.dir/build.make LOGLIB/CMakeFiles/Slog_static.dir/depend
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog_static.dir/build.make LOGLIB/CMakeFiles/Slog_static.dir/build
+Lib/CMakeFiles/Slog_static.dir/all:
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog_static.dir/build.make Lib/CMakeFiles/Slog_static.dir/depend
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog_static.dir/build.make Lib/CMakeFiles/Slog_static.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Slog_static"
-.PHONY : LOGLIB/CMakeFiles/Slog_static.dir/all
+.PHONY : Lib/CMakeFiles/Slog_static.dir/all
 
 # Build rule for subdir invocation for target.
-LOGLIB/CMakeFiles/Slog_static.dir/rule: cmake_check_build_system
+Lib/CMakeFiles/Slog_static.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LOGLIB/CMakeFiles/Slog_static.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Lib/CMakeFiles/Slog_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles 0
-.PHONY : LOGLIB/CMakeFiles/Slog_static.dir/rule
+.PHONY : Lib/CMakeFiles/Slog_static.dir/rule
 
 # Convenience name for target.
-Slog_static: LOGLIB/CMakeFiles/Slog_static.dir/rule
+Slog_static: Lib/CMakeFiles/Slog_static.dir/rule
 .PHONY : Slog_static
 
 # clean rule for target.
-LOGLIB/CMakeFiles/Slog_static.dir/clean:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog_static.dir/build.make LOGLIB/CMakeFiles/Slog_static.dir/clean
-.PHONY : LOGLIB/CMakeFiles/Slog_static.dir/clean
+Lib/CMakeFiles/Slog_static.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog_static.dir/build.make Lib/CMakeFiles/Slog_static.dir/clean
+.PHONY : Lib/CMakeFiles/Slog_static.dir/clean
 
 #=============================================================================
-# Target rules for target LOGLIB/CMakeFiles/Slog.dir
+# Target rules for target Lib/CMakeFiles/Slog.dir
 
 # All Build rule for target.
-LOGLIB/CMakeFiles/Slog.dir/all:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog.dir/build.make LOGLIB/CMakeFiles/Slog.dir/depend
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog.dir/build.make LOGLIB/CMakeFiles/Slog.dir/build
+Lib/CMakeFiles/Slog.dir/all:
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog.dir/build.make Lib/CMakeFiles/Slog.dir/depend
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog.dir/build.make Lib/CMakeFiles/Slog.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Slog"
-.PHONY : LOGLIB/CMakeFiles/Slog.dir/all
+.PHONY : Lib/CMakeFiles/Slog.dir/all
 
 # Build rule for subdir invocation for target.
-LOGLIB/CMakeFiles/Slog.dir/rule: cmake_check_build_system
+Lib/CMakeFiles/Slog.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LOGLIB/CMakeFiles/Slog.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Lib/CMakeFiles/Slog.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles 0
-.PHONY : LOGLIB/CMakeFiles/Slog.dir/rule
+.PHONY : Lib/CMakeFiles/Slog.dir/rule
 
 # Convenience name for target.
-Slog: LOGLIB/CMakeFiles/Slog.dir/rule
+Slog: Lib/CMakeFiles/Slog.dir/rule
 .PHONY : Slog
 
 # clean rule for target.
-LOGLIB/CMakeFiles/Slog.dir/clean:
-	$(MAKE) $(MAKESILENT) -f LOGLIB/CMakeFiles/Slog.dir/build.make LOGLIB/CMakeFiles/Slog.dir/clean
-.PHONY : LOGLIB/CMakeFiles/Slog.dir/clean
+Lib/CMakeFiles/Slog.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Lib/CMakeFiles/Slog.dir/build.make Lib/CMakeFiles/Slog.dir/clean
+.PHONY : Lib/CMakeFiles/Slog.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

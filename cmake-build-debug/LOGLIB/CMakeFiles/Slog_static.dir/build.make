@@ -67,17 +67,17 @@ include LOGLIB/CMakeFiles/Slog_static.dir/progress.make
 include LOGLIB/CMakeFiles/Slog_static.dir/flags.make
 
 LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.o: LOGLIB/CMakeFiles/Slog_static.dir/flags.make
-LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.o: ../LogLib/Slog.cc
+LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.o: ../Lib/Slog.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.o"
-	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Slog_static.dir/Slog.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc
+	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Slog_static.dir/Slog.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc
 
 LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Slog_static.dir/Slog.cc.i"
-	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc > CMakeFiles/Slog_static.dir/Slog.cc.i
+	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc > CMakeFiles/Slog_static.dir/Slog.cc.i
 
 LOGLIB/CMakeFiles/Slog_static.dir/Slog.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Slog_static.dir/Slog.cc.s"
-	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaosm/Downloads/dev-1/inforefiner-model/LogLib/Slog.cc -o CMakeFiles/Slog_static.dir/Slog.cc.s
+	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc -o CMakeFiles/Slog_static.dir/Slog.cc.s
 
 # Object files for target Slog_static
 Slog_static_OBJECTS = \
@@ -102,6 +102,6 @@ LOGLIB/CMakeFiles/Slog_static.dir/clean:
 .PHONY : LOGLIB/CMakeFiles/Slog_static.dir/clean
 
 LOGLIB/CMakeFiles/Slog_static.dir/depend:
-	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gaosm/Downloads/dev-1/inforefiner-model /home/gaosm/Downloads/dev-1/inforefiner-model/LogLib /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/CMakeFiles/Slog_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gaosm/Downloads/dev-1/inforefiner-model /home/gaosm/Downloads/dev-1/inforefiner-model/Lib /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-debug/LOGLIB/CMakeFiles/Slog_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : LOGLIB/CMakeFiles/Slog_static.dir/depend
 
