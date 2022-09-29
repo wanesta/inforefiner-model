@@ -24,7 +24,8 @@ int main()
     signal(SIGINT, sig_handler);
 
     HttpServer svr;
-    Log.init("/home/gaosm/Downloads/dev-1/inforefiner-model/config/slog.properties");
+    //Log.init("/home/gaosm/Downloads/dev-1/inforefiner-model/config/slog.properties");
+    Log.init("../config/slog.properties");
     // curl -v http://0.0.0.0:8888/json3
     svr.GET("/json3", [](const HttpReq *req, HttpResp *resp){
         std::string invalid_text = R"(

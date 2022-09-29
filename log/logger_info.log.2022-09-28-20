@@ -1,0 +1,7 @@
+2022-09-28 20:40:33,960.456 [140663987054400] INFO  Logger system start finish.
+2022-09-28 20:40:33,960.957 [140663987054400] INFO  server start ip : 0.0.0.0 port : 8888
+2022-09-28 20:40:36,011.151 [140663802820352] INFO  json string : {"happy":true,"list":[1,0,2],"name":"Niels","nothing":null,"object":{"currency":"USD","value":42.99},"pi":3.141,"response":{"everything":42}}
+2022-09-28 20:40:36,909.434 [140663802820352] INFO  json string : {"happy":true,"list":[1,0,2],"name":"Niels","nothing":null,"object":{"currency":"USD","value":42.99},"pi":3.141,"response":{"everything":42}}
+2022-09-28 20:40:51,346.205 [140663777642240] INFO  json string : {"happy":true,"list":[1,0,2],"name":"Niels","nothing":null,"object":{"currency":"USD","value":42.99},"pi":3.141,"response":{"everything":42}}
+2022-09-28 20:40:52,389.873 [140663760856832] INFO  json string : {"happy":true,"list":[1,0,2],"name":"Niels","nothing":null,"object":{"currency":"USD","value":42.99},"pi":3.141,"response":{"everything":42}}
+2022-09-28 20:41:16,589.261 [140663987054400] INFO  Slog System Stop Finish...

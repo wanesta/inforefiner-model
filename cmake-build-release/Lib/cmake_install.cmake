@@ -60,6 +60,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "/home/gaosm/Downloads/dev-1/inforefiner-model/lib" TYPE SHARED_LIBRARY FILES "/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Lib/libSlog.so")
   if(EXISTS "$ENV{DESTDIR}/home/gaosm/Downloads/dev-1/inforefiner-model/lib/libSlog.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/gaosm/Downloads/dev-1/inforefiner-model/lib/libSlog.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}/home/gaosm/Downloads/dev-1/inforefiner-model/lib/libSlog.so"
+         OLD_RPATH "/usr/local/lib:"
+         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/gaosm/Downloads/dev-1/inforefiner-model/lib/libSlog.so")
     endif()

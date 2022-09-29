@@ -6,3 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../Lib/Slog.h
+
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc
+workflow/WFFacilities.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/workflow/WFFacilities.h
+csignal
+-
+wfrest/HttpServer.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/wfrest/HttpServer.h
+wfrest/json.hpp
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/wfrest/json.hpp
+wfrest/CodeUtil.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/wfrest/CodeUtil.h
+Slog.h
+/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/Slog.h
+

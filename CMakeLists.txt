@@ -22,11 +22,14 @@ execute_process( COMMAND ${CMAKE_COMMAND} -E make_directory ${LOG_FILE})
 link_libraries(pthread)
 #如果不加 提示找不到 fatal error: Slog.h: No such file or directory #include "Slog.h"
 include_directories(${LIB})
-link_directories(${WFREST_LIB_DIR} ${WORKFLOW_LIB_DIR})
+
 
 find_package(OpenSSL REQUIRED)
 find_package(wfrest REQUIRED CONFIG HINTS ..)
+#先找
 find_package(workflow REQUIRED CONFIG HINTS ..)
+#再链接
+link_directories(${WFREST_LIB_DIR} ${WORKFLOW_LIB_DIR})
 #include_directories(
 #        ${OPENSSL_INCLUDE_DIR}
 #        ${CMAKE_CURRENT_BINARY_DIR}
@@ -55,7 +58,7 @@ endif ()
 #include_directories(${PROJECT_SOURCE_DIR}) # 头文件的路径
 link_directories(${LIB})
 find_library (libpath libSlog.a ${LIB})
-find_path(libp Slog.h ${PROJECT_SOURCE_DIR}/Lib)
+#find_path(libp Slog.h ${PROJECT_SOURCE_DIR}/Lib)
 #find_package(Slog REQUIRED)
 message (STATUS "XXXXXXXXXXXXXXXXXXXXXXXXXXXX      ${libpath}")
 if (${libpath} STREQUAL "libpath-NOTFOUND")
