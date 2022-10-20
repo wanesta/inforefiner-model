@@ -2,9 +2,7 @@
 // Created by root on 9/27/22.
 //
 
-#ifndef INFOREFINER_MODEL_SLOG_H
-#define INFOREFINER_MODEL_SLOG_H
-
+#pragma once
 /// 包裹类
 /// @note 在程序启动的时候调用Logger::Start方法，例如：
 ///       Log.init("slog.properties");
@@ -85,4 +83,3 @@ public:
 #define LOG_TRACE(...)    g_Logger.Trace(__VA_ARGS__);
 #endif
 
-#endif //INFOREFINER_MODEL_SLOG_H

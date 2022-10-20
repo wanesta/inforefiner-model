@@ -25,6 +25,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -49,6 +53,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -60,6 +68,62 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 server-test3/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/bin/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/bin/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 main/fast"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -133,6 +197,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -157,6 +225,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -181,6 +253,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -205,6 +281,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -232,7 +312,48 @@
 			<Option target="Slog_static"/>
 			<Option target="Slog"/>
 		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.h">
+			<Option target="server-test3"/>
+		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/Sources/server-test3.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/dict/dynamic_dict.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/dict/dynamic_dict.h">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/dict/global_data.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/dict/global_data.h">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.h">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/LinearRegression.cc">
+			<Option target="server-test3"/>
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/LinearRegression.h">
+			<Option target="server-test3"/>
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/util/ThreadPool.h">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/util/linear_util.h">
 			<Option target="server-test3"/>
 		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/CMakeLists.txt">

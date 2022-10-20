@@ -4,6 +4,33 @@
 CMakeFiles/server-test3.dir/Lib/Slog.cc.o: \
  ../Lib/Slog.cc \
  ../Lib/Slog.h
+CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o: \
+ ../Pool/ThreadPool.cc \
+ ../Pool/ThreadPool.h
 CMakeFiles/server-test3.dir/Sources/server-test3.cc.o: \
  ../Lib/Slog.h \
+ ../dict/dynamic_dict.h \
+ ../model/LightGBMPredict.h \
+ ../Pool/ThreadPool.h \
  ../Sources/server-test3.cc
+CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o: \
+ ../Lib/Slog.h \
+ ../dict/common.h \
+ ../dict/dynamic_dict.cc \
+ ../dict/dynamic_dict.h \
+ ../dict/ghash.h \
+ ../dict/str_fun.h
+CMakeFiles/server-test3.dir/dict/global_data.cc.o: \
+ ../Lib/Slog.h \
+ ../Pool/ThreadPool.h \
+ ../dict/dynamic_dict.h \
+ ../dict/global_data.cc \
+ ../dict/global_data.h \
+ ../util/ThreadPool.h
+CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o: \
+ ../model/LightGBMPredict.cc \
+ ../model/LightGBMPredict.h
+CMakeFiles/server-test3.dir/model/LinearRegression.cc.o: \
+ ../model/LinearRegression.cc \
+ ../model/LinearRegression.h \
+ ../util/linear_util.h

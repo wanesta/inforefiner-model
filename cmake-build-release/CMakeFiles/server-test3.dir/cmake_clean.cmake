@@ -1,6 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server-test3.dir/Lib/Slog.cc.o"
+  "CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o"
   "CMakeFiles/server-test3.dir/Sources/server-test3.cc.o"
+  "CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o"
+  "CMakeFiles/server-test3.dir/dict/global_data.cc.o"
+  "CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o"
+  "CMakeFiles/server-test3.dir/model/LinearRegression.cc.o"
   "bin/server-test3"
   "bin/server-test3.pdb"
 )

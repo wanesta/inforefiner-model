@@ -175,6 +175,19 @@ server-test3/fast:
 .PHONY : server-test3/fast
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named Slog_static
 
 # Build rule for target.
@@ -224,6 +237,30 @@ Lib/Slog.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Lib/Slog.cc.s
 .PHONY : Lib/Slog.cc.s
 
+Pool/ThreadPool.o: Pool/ThreadPool.cc.o
+.PHONY : Pool/ThreadPool.o
+
+# target to build an object file
+Pool/ThreadPool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o
+.PHONY : Pool/ThreadPool.cc.o
+
+Pool/ThreadPool.i: Pool/ThreadPool.cc.i
+.PHONY : Pool/ThreadPool.i
+
+# target to preprocess a source file
+Pool/ThreadPool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.i
+.PHONY : Pool/ThreadPool.cc.i
+
+Pool/ThreadPool.s: Pool/ThreadPool.cc.s
+.PHONY : Pool/ThreadPool.s
+
+# target to generate assembly for a file
+Pool/ThreadPool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.s
+.PHONY : Pool/ThreadPool.cc.s
+
 Sources/server-test3.o: Sources/server-test3.cc.o
 .PHONY : Sources/server-test3.o
 
@@ -248,6 +285,129 @@ Sources/server-test3.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/Sources/server-test3.cc.s
 .PHONY : Sources/server-test3.cc.s
 
+dict/dynamic_dict.o: dict/dynamic_dict.cc.o
+.PHONY : dict/dynamic_dict.o
+
+# target to build an object file
+dict/dynamic_dict.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o
+.PHONY : dict/dynamic_dict.cc.o
+
+dict/dynamic_dict.i: dict/dynamic_dict.cc.i
+.PHONY : dict/dynamic_dict.i
+
+# target to preprocess a source file
+dict/dynamic_dict.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.i
+.PHONY : dict/dynamic_dict.cc.i
+
+dict/dynamic_dict.s: dict/dynamic_dict.cc.s
+.PHONY : dict/dynamic_dict.s
+
+# target to generate assembly for a file
+dict/dynamic_dict.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.s
+.PHONY : dict/dynamic_dict.cc.s
+
+dict/global_data.o: dict/global_data.cc.o
+.PHONY : dict/global_data.o
+
+# target to build an object file
+dict/global_data.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/global_data.cc.o
+.PHONY : dict/global_data.cc.o
+
+dict/global_data.i: dict/global_data.cc.i
+.PHONY : dict/global_data.i
+
+# target to preprocess a source file
+dict/global_data.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/global_data.cc.i
+.PHONY : dict/global_data.cc.i
+
+dict/global_data.s: dict/global_data.cc.s
+.PHONY : dict/global_data.s
+
+# target to generate assembly for a file
+dict/global_data.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/global_data.cc.s
+.PHONY : dict/global_data.cc.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+model/LightGBMPredict.o: model/LightGBMPredict.cc.o
+.PHONY : model/LightGBMPredict.o
+
+# target to build an object file
+model/LightGBMPredict.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o
+.PHONY : model/LightGBMPredict.cc.o
+
+model/LightGBMPredict.i: model/LightGBMPredict.cc.i
+.PHONY : model/LightGBMPredict.i
+
+# target to preprocess a source file
+model/LightGBMPredict.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.i
+.PHONY : model/LightGBMPredict.cc.i
+
+model/LightGBMPredict.s: model/LightGBMPredict.cc.s
+.PHONY : model/LightGBMPredict.s
+
+# target to generate assembly for a file
+model/LightGBMPredict.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.s
+.PHONY : model/LightGBMPredict.cc.s
+
+model/LinearRegression.o: model/LinearRegression.cc.o
+.PHONY : model/LinearRegression.o
+
+# target to build an object file
+model/LinearRegression.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.o
+.PHONY : model/LinearRegression.cc.o
+
+model/LinearRegression.i: model/LinearRegression.cc.i
+.PHONY : model/LinearRegression.i
+
+# target to preprocess a source file
+model/LinearRegression.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.i
+.PHONY : model/LinearRegression.cc.i
+
+model/LinearRegression.s: model/LinearRegression.cc.s
+.PHONY : model/LinearRegression.s
+
+# target to generate assembly for a file
+model/LinearRegression.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.s
+.PHONY : model/LinearRegression.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -262,13 +422,32 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Slog"
 	@echo "... Slog_static"
+	@echo "... main"
 	@echo "... server-test3"
 	@echo "... Lib/Slog.o"
 	@echo "... Lib/Slog.i"
 	@echo "... Lib/Slog.s"
+	@echo "... Pool/ThreadPool.o"
+	@echo "... Pool/ThreadPool.i"
+	@echo "... Pool/ThreadPool.s"
 	@echo "... Sources/server-test3.o"
 	@echo "... Sources/server-test3.i"
 	@echo "... Sources/server-test3.s"
+	@echo "... dict/dynamic_dict.o"
+	@echo "... dict/dynamic_dict.i"
+	@echo "... dict/dynamic_dict.s"
+	@echo "... dict/global_data.o"
+	@echo "... dict/global_data.i"
+	@echo "... dict/global_data.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... model/LightGBMPredict.o"
+	@echo "... model/LightGBMPredict.i"
+	@echo "... model/LightGBMPredict.s"
+	@echo "... model/LinearRegression.o"
+	@echo "... model/LinearRegression.i"
+	@echo "... model/LinearRegression.s"
 .PHONY : help
 
 

@@ -87,6 +87,6 @@ void Slog::init( const char* properties_filename )
     if (properties_filename==NULL) return;
     log4cplus::initialize();
     log4cplus::PropertyConfigurator::doConfigure(properties_filename);
-    log4cplus::Logger _logger = log4cplus::Logger::getInstance("global");
+    log4cplus::Logger _logger = log4cplus::Logger::getInstance("root");
     LOG4CPLUS_INFO(_logger, "Logger system start finish.");
 }

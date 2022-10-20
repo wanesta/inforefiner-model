@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-rel
 
 # The main recursive "all" target.
 all: CMakeFiles/server-test3.dir/all
+all: CMakeFiles/main.dir/all
 all: Lib/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall: Lib/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/server-test3.dir/clean
+clean: CMakeFiles/main.dir/clean
 clean: Lib/clean
 .PHONY : clean
 
@@ -100,12 +102,12 @@ Lib/clean: Lib/CMakeFiles/Slog.dir/clean
 CMakeFiles/server-test3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=5,6,7 "Built target server-test3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=8,9,10,11,12,13,14,15 "Built target server-test3"
 .PHONY : CMakeFiles/server-test3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/server-test3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server-test3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles 0
 .PHONY : CMakeFiles/server-test3.dir/rule
@@ -118,6 +120,32 @@ server-test3: CMakeFiles/server-test3.dir/rule
 CMakeFiles/server-test3.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/clean
 .PHONY : CMakeFiles/server-test3.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main.dir
+
+# All Build rule for target.
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=5,6,7 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles 0
+.PHONY : CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: CMakeFiles/main.dir/rule
+.PHONY : main
+
+# clean rule for target.
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Target rules for target Lib/CMakeFiles/Slog_static.dir
