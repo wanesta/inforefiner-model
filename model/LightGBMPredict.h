@@ -10,7 +10,7 @@ using namespace std;
 class LightGBMPredict {
 public:
     LightGBMPredict();
-    void predict(std::vector<float> &row);
+    const double predict(std::vector<float> &row);
     void LoadModel(const std::string filename);
 
 private:

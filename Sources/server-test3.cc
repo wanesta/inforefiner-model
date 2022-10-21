@@ -7,6 +7,7 @@
 #include "wfrest/json.hpp"
 #include "wfrest/CodeUtil.h"
 //#include <exception>
+#include <nlohmann/json.hpp>
 #include "Slog.h"
 #include "../Pool/ThreadPool.h"
 #include "dynamic_dict.h"
@@ -28,14 +29,12 @@ int sum1(int a, int b){
 int sum2(int a, int b,int c){
     return a + b + c;
 }
+
+static LightGBMPredict lightgbm = LightGBMPredict();
 int main(){
     signal(SIGINT, sig_handler);
     const std::string model_file = "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model.txt";
-    LightGBMPredict lightgbm = LightGBMPredict();
-    std::vector<float> row = {0.644,0.247,-6.447,2.862,0.374,0.854,-1.346,-0.790,2.173,2.515,-1.001,1.400,0.000,1.575,1.807,2.007,0.000,3.585,-0.190,-0.744,1.102,0.658,1.061,0.9080,0.975,0.581,0.905,0.796};
     lightgbm.LoadModel(model_file);
-    lightgbm.predict(row);
-    std::cout << std::endl;
     HttpServer svr;
     //Log.init("/home/gaosm/Downloads/dev-1/inforefiner-model/config/slog.properties");
     Log.init("../config/slog.properties");
@@ -50,36 +49,43 @@ int main(){
     });
 
     // recieve json
-    //   curl -X POST http://0.0.0.0:8888/json4 -H 'Content-Type: application/json' -d '{"login":"inforefiner-model","password":"inforfiner_password"}'
+    /***
+     * scenesClass:  forecast（预测类）、evaluate（评价类）、explore（探索类）
+     * curl -X POST http://0.0.0.0:8888/json4 -H 'Content-Type: application/json' -d
+     * '{
+     *   "scenesClass":  "forecast",
+     *   "model":  "failure-rate-predict",
+     *   "col-name":  ["Triangulum","Sagittarius_Dwarf","Andromeda_nebula","Sextans_Dwarf","Knife_Edge","Corona_Borealis","Centaurus",
+     *                 "Pisces-Perseus","Mice","Coma","Antlia_Dwarf","Ursa_Major","Canis_Major","Large_Magellanic",
+     *                 "Fornax","Fornax_cluster","Draco","Bullet Cluster","Virgo galaxy cluster","Ursa Minor","Small Magellanic",
+     *                 "Stephans","Local cluster","Local supercluster","Tucana Dwarf Galaxy","Shapley supercluster","Whirlpool galaxy","Leo Doublet"],
+     *   "data":[
+     *      [0.644,1.4547,-6.447,2.862,0.374,0.854,-1.346,-0.790,2.173,1.3415,-1.001,1.400,0.000,1.575,1.807,2.007,0.000,3.585,-0.190,-0.744,1.102,0.658,1.061,0.9080,0.975,0.581,0.905,0.796],
+     *      [0.833,0.809,1.657,1.637,1.019,0.705,1.077,-0.968,2.173,1.261,0.114,-0.298,1.107,1.032,0.017,0.236,0.000,0.640,-0.026,-1.598 ,0.000,0.894,0.982,0.981,1.250,1.054,1.018,0.853],
+     *      [3.512,-1.094,-0.220,0.338,-0.328,1.962,-1.099,1.544,1.087,1.461,-1.305,-0.922,2.215,1.219,-1.289,0.400,0.000,0.731,0.155,1.249,0.000,1.173,1.366,0.993,2.259,2.000,1.626,1.349]]}'
+     * */
+    //inforefiner::model::ThreadPool pool;
+    //pool.start(10);
+    //std::future<int> res1 = pool.submit(sum1,200, 500);
+    //std::future<int> res2 = pool.submit(sum2, 10, 200,10);
+
     svr.POST("/json4", [](const HttpReq *req, HttpResp *resp){
-        Json json;
-        int N = 967;
-        float random = rand() % (N + 1) / (float)(N + 1);
-//        inforefiner::model::ThreadPool pool;
-//        pool.start(10);
-//        std::future<int> res1 = pool.submit(sum1,200, 500);
-        //std::future<int> res2 = pool.submit(sum2, 10, 200,10);
+        Json json_result;
+        Json req_context = req->json();
+        if(req_context.contains("scenesClass") && req_context.contains("data")){
+            Json json_data = req_context["data"];
+            std::vector<double> res_vec;
+            std::cout << "---------------------------------------------------> " << req_context["data"].size() << std::endl;
+            for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
+                std::vector<float> row_data = *it;
+                res_vec.push_back(lightgbm.predict(row_data));
+                std::cout << "                 " << lightgbm.predict(row_data) << '\n';
+            }
 
+            json_result["result"] = res_vec;
+        }
 
-        //std::cout << res2.get() << std::endl;
-
-        json["result"] = random;
-        //json["aaa"] = "test josn";
-        Json j2 = {
-                {"pi", 3.141},
-                {"happy", true},
-                {"name", "Niels"},
-                {"nothing", nullptr},
-                {"response", {
-                               {"everything", 42}
-                       }},
-                {"list", {1, 0, 2}},
-                {"object", {
-                               {"currency", "USD"},
-                             {"value", 42.99}
-                       }}
-        };
-        std::string str = to_string(j2);
+        std::string str = to_string(req_context);
         Log.Info("json string : %s", str.c_str());
         Log.Error("json string : %s", str.c_str());
         Log.Warn("json string : %s", str.c_str());
@@ -94,9 +100,9 @@ int main(){
             //Log.Fatal("Debug log[%d]", 10000);
             return;
         }
-        resp->Json(json);
+        resp->Json(json_result);
         //resp->String("\n  aa a a   \n");
-        fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
+        //fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
     });
     //Log.Info("Debug log[%s]", 10000);
     const char *addr = "0.0.0.0";
