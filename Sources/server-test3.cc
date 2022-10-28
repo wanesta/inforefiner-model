@@ -43,6 +43,7 @@ int main(){
     const char *model_path = strcat(buffer,"");
 
     std::cout<< "hhhhhhhhhhhhhhhhhhhhhhhhhhhh" << model_path << std::endl;
+    // /root/inforefiner-model/model-data/LightGBM_model.txt
     const std::string model_file = "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model.txt";
     lightgbm.LoadModel(model_file);
     HttpServer svr;
