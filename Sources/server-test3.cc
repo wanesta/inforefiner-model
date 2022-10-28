@@ -84,6 +84,9 @@ int main(){
     svr.POST("/json4", [](const HttpReq *req, HttpResp *resp){
         Json json_result;
         Json req_context = req->json();
+        time_t t = time(NULL);
+        struct tm *stime = localtime(&t);
+        printf("predict begin ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
         if(req_context.contains("scenesClass") && req_context.contains("data")){
             Json json_data = req_context["data"];
             std::vector<double> res_vec;
@@ -91,12 +94,12 @@ int main(){
             for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                 std::vector<float> row_data = *it;
                 res_vec.push_back(lightgbm.predict(row_data));
-                std::cout << "                 " << lightgbm.predict(row_data) << '\n';
+                //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
             }
 
             json_result["result"] = res_vec;
         }
-
+        printf("predict finish ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
         std::string str = to_string(req_context);
         Log.Info("json string : %s", str.c_str());
         Log.Error("json string : %s", str.c_str());
