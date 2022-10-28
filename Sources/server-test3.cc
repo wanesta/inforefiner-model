@@ -6,6 +6,9 @@
 #include "wfrest/HttpServer.h"
 #include "wfrest/json.hpp"
 #include "wfrest/CodeUtil.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
 //#include <exception>
 #include <nlohmann/json.hpp>
 #include "Slog.h"
@@ -33,6 +36,13 @@ int sum2(int a, int b,int c){
 static LightGBMPredict lightgbm = LightGBMPredict();
 int main(){
     signal(SIGINT, sig_handler);
+    char *buffer;
+    buffer = getcwd(NULL, 0);
+    cout << "文件路径" << buffer << endl;
+//将需要调用的模块使用 strcat 作拼接;
+    const char *model_path = strcat(buffer,"");
+
+    std::cout<< "hhhhhhhhhhhhhhhhhhhhhhhhhhhh" << model_path << std::endl;
     const std::string model_file = "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model.txt";
     lightgbm.LoadModel(model_file);
     HttpServer svr;
@@ -62,7 +72,9 @@ int main(){
      *   "data":[
      *      [0.644,1.4547,-6.447,2.862,0.374,0.854,-1.346,-0.790,2.173,1.3415,-1.001,1.400,0.000,1.575,1.807,2.007,0.000,3.585,-0.190,-0.744,1.102,0.658,1.061,0.9080,0.975,0.581,0.905,0.796],
      *      [0.833,0.809,1.657,1.637,1.019,0.705,1.077,-0.968,2.173,1.261,0.114,-0.298,1.107,1.032,0.017,0.236,0.000,0.640,-0.026,-1.598 ,0.000,0.894,0.982,0.981,1.250,1.054,1.018,0.853],
-     *      [3.512,-1.094,-0.220,0.338,-0.328,1.962,-1.099,1.544,1.087,1.461,-1.305,-0.922,2.215,1.219,-1.289,0.400,0.000,0.731,0.155,1.249,0.000,1.173,1.366,0.993,2.259,2.000,1.626,1.349]]}'
+     *      [3.512,-1.094,-0.220,0.338,-0.328,1.962,-1.099,1.544,1.087,1.461,-1.305,-0.922,2.215,1.219,-1.289,0.400,0.000,0.731,0.155,1.249,0.000,1.173,1.366,0.993,2.259,2.000,1.626,1.349]
+     *      ]
+     * }'
      * */
     //inforefiner::model::ThreadPool pool;
     //pool.start(10);
