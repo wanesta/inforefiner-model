@@ -78,47 +78,59 @@ int main(){
     //pool.start(10);
     //std::future<int> res1 = pool.submit(sum1,200, 500);
     //std::future<int> res2 = pool.submit(sum2, 10, 200,10);
-
     svr.POST("/json4", [](const HttpReq *req, HttpResp *resp){
         Json json_result;
-        Json req_context = req->json();
-        time_t t = time(NULL);
-        struct tm *stime = localtime(&t);
-        printf("predict begin ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
-        if(req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast"){
-            Json json_data = req_context["data"];
-            std::vector<std::vector<double>> res_vec;
-            std::cout << "---------------------------------------------------> " << req_context["data"].size() << std::endl;
-            for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
-                std::vector<float> row_data = *it;
-                res_vec.push_back(lightgbm.predictVec(row_data));
-                //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
-            }
-            json_result["result"] = res_vec;
-        }
-        if(req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore") {
-            Json json_data = req_context["data"];
-            std::vector<std::vector<double>> dataVec;
-            for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
-                std::vector<double> row_data = *it;
-                dataVec.push_back(row_data);
-            }
-            int rowcnt = dataVec.size(), colcnt = dataVec[0].size();
-            abnormalDetect->ModelPredict(dataVec,rowcnt,colcnt);
-            json_result["result"] = abnormalDetect->getResultVec();
+        try {
+            Json req_context = req->json();
+            time_t t = time(NULL);
+            struct tm *stime = localtime(&t);
+            printf("predict begin ******** %4d-%02d-%02d %02d/%02d/%2d\n", stime->tm_year + 1900, stime->tm_mon + 1,
+                   stime->tm_mday, stime->tm_hour, stime->tm_min, stime->tm_sec);
+            if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast") {
+                Json json_data = req_context["data"];
+                std::vector<std::vector<double>> res_vec;
+                std::cout << "---------------------------------------------------> " << req_context["data"].size()
+                          << std::endl;
+                for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
+                    std::vector<float> row_data = *it;
+                    res_vec.push_back(lightgbm.predictVec(row_data));
+                    //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
+                }
+                json_result["scenesClass"] = "forecast";
+                json_result["model"] = "failure-rate";
+                json_result["result"] = res_vec;
+            }else if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore") {
+                Json json_data = req_context["data"];
+                std::vector<std::vector<double>> dataVec;
+                for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
+                    std::vector<double> row_data = *it;
+                    dataVec.push_back(row_data);
+                }
+                int rowcnt = dataVec.size(), colcnt = dataVec[0].size();
+                abnormalDetect->ModelPredict(dataVec, rowcnt, colcnt);
+                json_result["result"] = abnormalDetect->getResultVec();
 //            std::vector<int> dvec = std::vector<int>(rowcnt);
 //            ini();
 //            test3(dataVec,rowcnt,colcnt,dvec);
 //            json_result["result"] = dvec;
-            delete abnormalDetect;
+                delete abnormalDetect;
+            }else{
+                throw 404;
+            }
+            printf("predict finish ******** %4d-%02d-%02d %02d/%02d/%2d\n", stime->tm_year + 1900, stime->tm_mon + 1,
+                   stime->tm_mday, stime->tm_hour, stime->tm_min, stime->tm_sec);
+            std::string str = to_string(req_context);
+            Log.Info("json string : %s", str.c_str());
+            Log.Error("json string : %s", str.c_str());
+            Log.Warn("json string : %s", str.c_str());
+            Log.Debug("json string : %s", str.c_str());
+        }catch(exception &e){
+            json_result["status"] = 400;
+            Log.Error("json string exception!!! ");
+        }catch (int i){
+            if(i == 200) json_result["status"] = 200;
+            if(i == 400) json_result["status"] = 400;
         }
-        printf("predict finish ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
-        std::string str = to_string(req_context);
-        Log.Info("json string : %s", str.c_str());
-        Log.Error("json string : %s", str.c_str());
-        Log.Warn("json string : %s", str.c_str());
-        Log.Debug("json string : %s", str.c_str());
-
         if (req->content_type() != APPLICATION_JSON){
             resp->String("NOT APPLICATION_JSON");
             Log.Error("asdfasdf");
@@ -128,6 +140,7 @@ int main(){
             //Log.Fatal("Debug log[%d]", 10000);
             return;
         }
+        if(!json_result.contains("status")) json_result["status"] = 200;
         resp->Json(json_result);
         //resp->String("\n  aa a a   \n");
         //fprintf(stderr, "Json : %s\n", req->json().dump(4).c_str());
