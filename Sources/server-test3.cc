@@ -115,7 +115,7 @@ int main(){
 //            json_result["result"] = dvec;
                 delete abnormalDetect;
             }else{
-                throw 404;
+                throw 400;
             }
             printf("predict finish ******** %4d-%02d-%02d %02d/%02d/%2d\n", stime->tm_year + 1900, stime->tm_mon + 1,
                    stime->tm_mday, stime->tm_hour, stime->tm_min, stime->tm_sec);
@@ -128,7 +128,6 @@ int main(){
             json_result["status"] = 400;
             Log.Error("json string exception!!! ");
         }catch (int i){
-            if(i == 200) json_result["status"] = 200;
             if(i == 400) json_result["status"] = 400;
         }
         if (req->content_type() != APPLICATION_JSON){
