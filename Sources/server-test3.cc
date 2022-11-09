@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <pwd.h>
-#include <faiss/IndexIVFFlat.h>
+//#include <faiss/IndexIVFFlat.h>
 
 //#include <exception>
 #include <nlohmann/json.hpp>
