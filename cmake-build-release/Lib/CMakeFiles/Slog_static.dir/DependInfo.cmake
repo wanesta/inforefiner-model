@@ -15,10 +15,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Lib"
+  "/usr/local/lib/python3.6/dist-packages/numpy/core/include"
+  "../Pool/ThreadPool.cc"
   "../util"
   "../dict"
-  "../Pool/ThreadPool.cc"
   "../model"
+  "/usr/include/python3.6"
   )
 
 # The set of dependency files which are needed:

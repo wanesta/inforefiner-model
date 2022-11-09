@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/Lib -I/home/gaosm/Downloads/dev-1/inforefiner-model/util -I/home/gaosm/Downloads/dev-1/inforefiner-model/dict -I/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc -I/home/gaosm/Downloads/dev-1/inforefiner-model/model
+CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/Lib -I/usr/local/lib/python3.6/dist-packages/numpy/core/include -I/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc -I/home/gaosm/Downloads/dev-1/inforefiner-model/util -I/home/gaosm/Downloads/dev-1/inforefiner-model/dict -I/home/gaosm/Downloads/dev-1/inforefiner-model/model -I/usr/include/python3.6
 
 CXX_FLAGS =  -Wall -fPIC -pipe -std=c++14 -fexceptions -O3 -DNDEBUG
 

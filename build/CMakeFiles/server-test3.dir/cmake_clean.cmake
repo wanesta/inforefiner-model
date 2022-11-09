@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o.d"
   "CMakeFiles/server-test3.dir/dict/global_data.cc.o"
   "CMakeFiles/server-test3.dir/dict/global_data.cc.o.d"
+  "CMakeFiles/server-test3.dir/model/Abnormal.cc.o"
+  "CMakeFiles/server-test3.dir/model/Abnormal.cc.o.d"
   "CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o"
   "CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o.d"
   "CMakeFiles/server-test3.dir/model/LinearRegression.cc.o"

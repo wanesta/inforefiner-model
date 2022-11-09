@@ -92,9 +92,22 @@ CMakeFiles/server-test3.dir/Lib/Slog.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server-test3.dir/Lib/Slog.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.cc -o CMakeFiles/server-test3.dir/Lib/Slog.cc.s
 
+CMakeFiles/server-test3.dir/model/Abnormal.cc.o: CMakeFiles/server-test3.dir/flags.make
+CMakeFiles/server-test3.dir/model/Abnormal.cc.o: ../model/Abnormal.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server-test3.dir/model/Abnormal.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/model/Abnormal.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.cc
+
+CMakeFiles/server-test3.dir/model/Abnormal.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server-test3.dir/model/Abnormal.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.cc > CMakeFiles/server-test3.dir/model/Abnormal.cc.i
+
+CMakeFiles/server-test3.dir/model/Abnormal.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server-test3.dir/model/Abnormal.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.cc -o CMakeFiles/server-test3.dir/model/Abnormal.cc.s
+
 CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o: CMakeFiles/server-test3.dir/flags.make
 CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o: ../model/LightGBMPredict.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.cc
 
 CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.i: cmake_force
@@ -107,7 +120,7 @@ CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.s: cmake_force
 
 CMakeFiles/server-test3.dir/model/LinearRegression.cc.o: CMakeFiles/server-test3.dir/flags.make
 CMakeFiles/server-test3.dir/model/LinearRegression.cc.o: ../model/LinearRegression.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server-test3.dir/model/LinearRegression.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server-test3.dir/model/LinearRegression.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/model/LinearRegression.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/model/LinearRegression.cc
 
 CMakeFiles/server-test3.dir/model/LinearRegression.cc.i: cmake_force
@@ -120,7 +133,7 @@ CMakeFiles/server-test3.dir/model/LinearRegression.cc.s: cmake_force
 
 CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o: CMakeFiles/server-test3.dir/flags.make
 CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o: ../Pool/ThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc
 
 CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.i: cmake_force
@@ -133,7 +146,7 @@ CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.s: cmake_force
 
 CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o: CMakeFiles/server-test3.dir/flags.make
 CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o: ../dict/dynamic_dict.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/dict/dynamic_dict.cc
 
 CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.i: cmake_force
@@ -146,7 +159,7 @@ CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.s: cmake_force
 
 CMakeFiles/server-test3.dir/dict/global_data.cc.o: CMakeFiles/server-test3.dir/flags.make
 CMakeFiles/server-test3.dir/dict/global_data.cc.o: ../dict/global_data.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server-test3.dir/dict/global_data.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server-test3.dir/dict/global_data.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-test3.dir/dict/global_data.cc.o -c /home/gaosm/Downloads/dev-1/inforefiner-model/dict/global_data.cc
 
 CMakeFiles/server-test3.dir/dict/global_data.cc.i: cmake_force
@@ -161,6 +174,7 @@ CMakeFiles/server-test3.dir/dict/global_data.cc.s: cmake_force
 server__test3_OBJECTS = \
 "CMakeFiles/server-test3.dir/Sources/server-test3.cc.o" \
 "CMakeFiles/server-test3.dir/Lib/Slog.cc.o" \
+"CMakeFiles/server-test3.dir/model/Abnormal.cc.o" \
 "CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o" \
 "CMakeFiles/server-test3.dir/model/LinearRegression.cc.o" \
 "CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o" \
@@ -172,6 +186,7 @@ server__test3_EXTERNAL_OBJECTS =
 
 bin/server-test3: CMakeFiles/server-test3.dir/Sources/server-test3.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/Lib/Slog.cc.o
+bin/server-test3: CMakeFiles/server-test3.dir/model/Abnormal.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/model/LinearRegression.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/Pool/ThreadPool.cc.o
@@ -179,8 +194,10 @@ bin/server-test3: CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/dict/global_data.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/build.make
 bin/server-test3: /usr/local/lib/lib_lightgbm.so
+bin/server-test3: /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6.so
+bin/server-test3: /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
 bin/server-test3: CMakeFiles/server-test3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/server-test3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/server-test3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server-test3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

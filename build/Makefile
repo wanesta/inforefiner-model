@@ -357,6 +357,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/Abnormal.o: model/Abnormal.cc.o
+.PHONY : model/Abnormal.o
+
+# target to build an object file
+model/Abnormal.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/Abnormal.cc.o
+.PHONY : model/Abnormal.cc.o
+
+model/Abnormal.i: model/Abnormal.cc.i
+.PHONY : model/Abnormal.i
+
+# target to preprocess a source file
+model/Abnormal.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/Abnormal.cc.i
+.PHONY : model/Abnormal.cc.i
+
+model/Abnormal.s: model/Abnormal.cc.s
+.PHONY : model/Abnormal.s
+
+# target to generate assembly for a file
+model/Abnormal.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/Abnormal.cc.s
+.PHONY : model/Abnormal.cc.s
+
 model/LightGBMPredict.o: model/LightGBMPredict.cc.o
 .PHONY : model/LightGBMPredict.o
 
@@ -442,6 +466,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/Abnormal.o"
+	@echo "... model/Abnormal.i"
+	@echo "... model/Abnormal.s"
 	@echo "... model/LightGBMPredict.o"
 	@echo "... model/LightGBMPredict.i"
 	@echo "... model/LightGBMPredict.s"

@@ -359,7 +359,11 @@ CMakeFiles/server-test3.dir/Sources/server-test3.cc.o: \
  /usr/include/c++/7/bits/mask_array.h \
  /usr/include/c++/7/bits/indirect_array.h \
  /usr/local/include/wfrest/CodeUtil.h /usr/include/pwd.h \
- /usr/local/include/nlohmann/json.hpp \
+ /usr/local/include/faiss/IndexIVFFlat.h \
+ /usr/local/include/faiss/IndexIVF.h /usr/local/include/faiss/Index.h \
+ /usr/local/include/faiss/InvertedLists.h \
+ /usr/local/include/faiss/Clustering.h /usr/local/include/faiss/Heap.h \
+ /usr/include/c++/7/climits /usr/local/include/nlohmann/json.hpp \
  /home/gaosm/Downloads/dev-1/inforefiner-model/Lib/Slog.h \
  /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/../Pool/ThreadPool.h \
  /usr/include/c++/7/queue /usr/include/c++/7/deque \
@@ -367,4 +371,65 @@ CMakeFiles/server-test3.dir/Sources/server-test3.cc.o: \
  /usr/include/c++/7/bits/stl_queue.h /usr/include/c++/7/iostream \
  /home/gaosm/Downloads/dev-1/inforefiner-model/dict/dynamic_dict.h \
  /home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.h \
- /usr/local/include/LightGBM/c_api.h /usr/local/include/LightGBM/export.h
+ /usr/local/include/LightGBM/c_api.h /usr/local/include/LightGBM/export.h \
+ /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/arrayobject.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ndarrayobject.h \
+ /usr/include/python3.6/Python.h /usr/include/python3.6/patchlevel.h \
+ /usr/include/python3.6/pyconfig.h \
+ /usr/include/x86_64-linux-gnu/python3.6m/pyconfig.h \
+ /usr/include/python3.6/pymacconfig.h /usr/include/crypt.h \
+ /usr/include/python3.6/pyport.h /usr/include/inttypes.h \
+ /usr/include/c++/7/math.h /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/python3.6/pymacro.h /usr/include/python3.6/pyatomic.h \
+ /usr/include/python3.6/pymath.h /usr/include/python3.6/pytime.h \
+ /usr/include/python3.6/object.h /usr/include/python3.6/pymem.h \
+ /usr/include/python3.6/objimpl.h /usr/include/python3.6/typeslots.h \
+ /usr/include/python3.6/pyhash.h /usr/include/python3.6/pydebug.h \
+ /usr/include/python3.6/bytearrayobject.h \
+ /usr/include/python3.6/bytesobject.h \
+ /usr/include/python3.6/unicodeobject.h \
+ /usr/include/python3.6/longobject.h /usr/include/python3.6/longintrepr.h \
+ /usr/include/python3.6/boolobject.h /usr/include/python3.6/floatobject.h \
+ /usr/include/python3.6/complexobject.h \
+ /usr/include/python3.6/rangeobject.h \
+ /usr/include/python3.6/memoryobject.h \
+ /usr/include/python3.6/tupleobject.h /usr/include/python3.6/listobject.h \
+ /usr/include/python3.6/dictobject.h /usr/include/python3.6/odictobject.h \
+ /usr/include/python3.6/enumobject.h /usr/include/python3.6/setobject.h \
+ /usr/include/python3.6/methodobject.h \
+ /usr/include/python3.6/moduleobject.h \
+ /usr/include/python3.6/funcobject.h /usr/include/python3.6/classobject.h \
+ /usr/include/python3.6/fileobject.h /usr/include/python3.6/pycapsule.h \
+ /usr/include/python3.6/traceback.h /usr/include/python3.6/pystate.h \
+ /usr/include/python3.6/sliceobject.h /usr/include/python3.6/cellobject.h \
+ /usr/include/python3.6/iterobject.h /usr/include/python3.6/genobject.h \
+ /usr/include/python3.6/descrobject.h /usr/include/python3.6/warnings.h \
+ /usr/include/python3.6/weakrefobject.h \
+ /usr/include/python3.6/structseq.h \
+ /usr/include/python3.6/namespaceobject.h /usr/include/python3.6/codecs.h \
+ /usr/include/python3.6/pyerrors.h /usr/include/python3.6/pyarena.h \
+ /usr/include/python3.6/modsupport.h /usr/include/python3.6/pythonrun.h \
+ /usr/include/python3.6/pylifecycle.h /usr/include/python3.6/ceval.h \
+ /usr/include/python3.6/sysmodule.h /usr/include/python3.6/osmodule.h \
+ /usr/include/python3.6/intrcheck.h /usr/include/python3.6/import.h \
+ /usr/include/python3.6/abstract.h /usr/include/python3.6/bltinmodule.h \
+ /usr/include/python3.6/compile.h /usr/include/python3.6/code.h \
+ /usr/include/python3.6/eval.h /usr/include/python3.6/pyctype.h \
+ /usr/include/python3.6/pystrtod.h /usr/include/python3.6/pystrcmp.h \
+ /usr/include/python3.6/dtoa.h /usr/include/python3.6/fileutils.h \
+ /usr/include/python3.6/pyfpe.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ndarraytypes.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/npy_common.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/numpyconfig.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/_numpyconfig.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/npy_endian.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/npy_cpu.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/utils.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/old_defines.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/__multiarray_api.h \
+ /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/npy_interrupt.h \
+ /usr/include/setjmp.h /usr/include/python3.6/Python.h

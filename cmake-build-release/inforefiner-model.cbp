@@ -25,10 +25,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -53,10 +55,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -81,10 +85,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -109,10 +115,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -197,10 +205,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -225,10 +235,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -253,10 +265,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -281,10 +295,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Lib"/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/numpy/core/include"/>
+					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/util"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/dict"/>
-					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc"/>
 					<Add directory="/home/gaosm/Downloads/dev-1/inforefiner-model/model"/>
+					<Add directory="/usr/include/python3.6"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -335,6 +351,12 @@
 		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/main.cpp">
 			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.cc">
+			<Option target="server-test3"/>
+		</Unit>
+		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.h">
+			<Option target="server-test3"/>
 		</Unit>
 		<Unit filename="/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.cc">
 			<Option target="server-test3"/>

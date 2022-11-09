@@ -9,12 +9,15 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <pwd.h>
+#include <faiss/IndexIVFFlat.h>
+
 //#include <exception>
 #include <nlohmann/json.hpp>
 #include "Slog.h"
 #include "../Pool/ThreadPool.h"
 #include "dynamic_dict.h"
 #include "LightGBMPredict.h"
+#include "Abnormal.h"
 
 using namespace wfrest;
 using Json = nlohmann::json;
@@ -26,14 +29,8 @@ void sig_handler(int signo)
     wait_group.done();
 }
 
-int sum1(int a, int b){
-    return a + b;
-}
-int sum2(int a, int b,int c){
-    return a + b + c;
-}
-
 static LightGBMPredict lightgbm = LightGBMPredict();
+AbnormalDetect* abnormalDetect = new AbnormalDetect();
 int main(){
     signal(SIGINT, sig_handler);
     char *buffer;
@@ -88,17 +85,32 @@ int main(){
         time_t t = time(NULL);
         struct tm *stime = localtime(&t);
         printf("predict begin ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
-        if(req_context.contains("scenesClass") && req_context.contains("data")){
+        if(req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast"){
             Json json_data = req_context["data"];
-            std::vector<double> res_vec;
+            std::vector<std::vector<double>> res_vec;
             std::cout << "---------------------------------------------------> " << req_context["data"].size() << std::endl;
             for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                 std::vector<float> row_data = *it;
-                res_vec.push_back(lightgbm.predict(row_data));
+                res_vec.push_back(lightgbm.predictVec(row_data));
                 //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
             }
-
             json_result["result"] = res_vec;
+        }
+        if(req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore") {
+            Json json_data = req_context["data"];
+            std::vector<std::vector<double>> dataVec;
+            for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
+                std::vector<double> row_data = *it;
+                dataVec.push_back(row_data);
+            }
+            int rowcnt = dataVec.size(), colcnt = dataVec[0].size();
+            abnormalDetect->ModelPredict(dataVec,rowcnt,colcnt);
+            json_result["result"] = abnormalDetect->getResultVec();
+//            std::vector<int> dvec = std::vector<int>(rowcnt);
+//            ini();
+//            test3(dataVec,rowcnt,colcnt,dvec);
+//            json_result["result"] = dvec;
+            delete abnormalDetect;
         }
         printf("predict finish ******** %4d-%02d-%02d %02d/%02d/%2d\n",stime->tm_year+1900,stime->tm_mon+1,stime->tm_mday,stime->tm_hour,stime->tm_min,stime->tm_sec);
         std::string str = to_string(req_context);

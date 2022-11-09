@@ -11,6 +11,7 @@ class LightGBMPredict {
 public:
     LightGBMPredict();
     const double predict(std::vector<float> &row);
+    std::vector<double> predictVec(std::vector<float> &row);
     void LoadModel(const std::string filename);
 
 private:
