@@ -95,6 +95,6 @@ add_executable(main ${main} ${LINEAR_REGRESSION} )
 #        ${LOG_LIB}/Slog.so
 #        ${lib_dir})
 
-target_link_libraries(server-test3 pthread ${WFREST_LIB} log4cplus ${lightgbm_so} faiss ${PYENV})
+target_link_libraries(server-test3 pthread ${WFREST_LIB} log4cplus ${lightgbm_so} ${PYENV})
 #target_link_libraries(server-test3 ${LIB}/libSlog.so)
 #target_include_directories(server-test3 PUBLIC ${PROJECT_SOURCE_DIR}/Lib)
