@@ -15,7 +15,7 @@ void LightGBMPredict::LoadModel(const std::string filename) {
         std::cout << "Load Model success ... !" << std::endl;
     }
 }
-const double LightGBMPredict::predict(std::vector<float> &row){
+const double LightGBMPredict::predict(std::vector<double> &row){
 //    std::vector<float> row = {0.07946399999999999, 0.9537260000000001, 0.9621209999999999, 0.976303, 7.0, 3.0};
 //    for (auto value : row)
 //        std::cout << value << ",";
@@ -34,7 +34,7 @@ const double LightGBMPredict::predict(std::vector<float> &row){
     //std::cout << "file predict result is:" << res << std::endl;
     //std::cout << "row predict result size is " << out.size() << " value is " << out[0] << std::endl;
 }
-std::vector<double> LightGBMPredict::predictVec(std::vector<float> &row){
+std::vector<double> LightGBMPredict::predictVec(std::vector<double> &row){
 //    std::vector<float> row = {0.07946399999999999, 0.9537260000000001, 0.9621209999999999, 0.976303, 7.0, 3.0};
 //    for (auto value : row)
 //        std::cout << value << ",";

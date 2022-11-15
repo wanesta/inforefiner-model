@@ -92,8 +92,9 @@ int main(){
                 std::cout << "---------------------------------------------------> " << req_context["data"].size()
                           << std::endl;
                 for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
-                    std::vector<float> row_data = *it;
-                    res_vec.push_back(lightgbm.predictVec(row_data));
+                    std::vector<double> row_data = *it;
+                    row_data.push_back(lightgbm.predict(row_data));
+                    res_vec.push_back(row_data);
                     //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
                 }
                 json_result["scenesClass"] = "forecast";
