@@ -194,8 +194,6 @@ bin/server-test3: CMakeFiles/server-test3.dir/dict/dynamic_dict.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/dict/global_data.cc.o
 bin/server-test3: CMakeFiles/server-test3.dir/build.make
 bin/server-test3: /usr/local/lib/lib_lightgbm.so
-bin/server-test3: /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6.so
-bin/server-test3: /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
 bin/server-test3: CMakeFiles/server-test3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/server-test3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server-test3.dir/link.txt --verbose=$(VERBOSE)

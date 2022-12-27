@@ -20,12 +20,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Lib"
-  "/usr/local/lib/python3.6/dist-packages/numpy/core/include"
   "../Pool/ThreadPool.cc"
   "../util"
   "../dict"
   "../model"
-  "/usr/include/python3.6"
   )
 
 # The set of dependency files which are needed:

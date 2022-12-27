@@ -27,6 +27,9 @@ CMakeFiles/server-test3.dir/dict/global_data.cc.o
  /home/gaosm/Downloads/dev-1/inforefiner-model/dict/global_data.cc
  /home/gaosm/Downloads/dev-1/inforefiner-model/dict/global_data.h
  /home/gaosm/Downloads/dev-1/inforefiner-model/util/ThreadPool.h
+CMakeFiles/server-test3.dir/model/Abnormal.cc.o
+ /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.cc
+ /home/gaosm/Downloads/dev-1/inforefiner-model/model/Abnormal.h
 CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o
  /home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.cc
  /home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.h

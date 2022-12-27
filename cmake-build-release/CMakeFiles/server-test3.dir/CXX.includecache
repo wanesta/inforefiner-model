@@ -82,15 +82,3 @@ dynamic_dict.h
 LightGBMPredict.h
 /home/gaosm/Downloads/dev-1/inforefiner-model/Sources/LightGBMPredict.h
 
-/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.cc
-LightGBMPredict.h
-/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.h
-
-/home/gaosm/Downloads/dev-1/inforefiner-model/model/LightGBMPredict.h
-LightGBM/c_api.h
--
-iostream
--
-vector
--
-

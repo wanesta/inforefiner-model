@@ -27,6 +27,9 @@ CMakeFiles/server-test3.dir/dict/global_data.cc.o: \
  ../dict/global_data.cc \
  ../dict/global_data.h \
  ../util/ThreadPool.h
+CMakeFiles/server-test3.dir/model/Abnormal.cc.o: \
+ ../model/Abnormal.cc \
+ ../model/Abnormal.h
 CMakeFiles/server-test3.dir/model/LightGBMPredict.cc.o: \
  ../model/LightGBMPredict.cc \
  ../model/LightGBMPredict.h

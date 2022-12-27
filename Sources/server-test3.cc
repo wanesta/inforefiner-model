@@ -17,7 +17,7 @@
 #include "../Pool/ThreadPool.h"
 #include "dynamic_dict.h"
 #include "LightGBMPredict.h"
-#include "Abnormal.h"
+//#include "Abnormal.h"
 
 using namespace wfrest;
 using Json = nlohmann::json;
@@ -30,7 +30,7 @@ void sig_handler(int signo)
 }
 
 static LightGBMPredict lightgbm = LightGBMPredict();
-AbnormalDetect* abnormalDetect = new AbnormalDetect();
+//AbnormalDetect* abnormalDetect = new AbnormalDetect();
 int main(){
     signal(SIGINT, sig_handler);
     char *buffer;
@@ -108,13 +108,13 @@ int main(){
                     dataVec.push_back(row_data);
                 }
                 int rowcnt = dataVec.size(), colcnt = dataVec[0].size();
-                abnormalDetect->ModelPredict(dataVec, rowcnt, colcnt);
-                json_result["result"] = abnormalDetect->getResultVec();
+                //abnormalDetect->ModelPredict(dataVec, rowcnt, colcnt);
+                //json_result["result"] = abnormalDetect->getResultVec();
 //            std::vector<int> dvec = std::vector<int>(rowcnt);
 //            ini();
 //            test3(dataVec,rowcnt,colcnt,dvec);
 //            json_result["result"] = dvec;
-                delete abnormalDetect;
+                //delete abnormalDetect;
             }else{
                 throw 400;
             }
