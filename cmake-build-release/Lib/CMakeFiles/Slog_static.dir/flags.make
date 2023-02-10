@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/Lib -I/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc -I/home/gaosm/Downloads/dev-1/inforefiner-model/util -I/home/gaosm/Downloads/dev-1/inforefiner-model/dict -I/home/gaosm/Downloads/dev-1/inforefiner-model/model
+CXX_INCLUDES = -I/home/gaosm/Downloads/dev-1/inforefiner-model/Lib -I/home/gaosm/Downloads/dev-1/inforefiner-model/Pool/ThreadPool.cc -I/home/gaosm/Downloads/dev-1/inforefiner-model/util -I/home/gaosm/Downloads/dev-1/inforefiner-model/dict -I/home/gaosm/Downloads/dev-1/inforefiner-model/model -I/usr/local/include/tf -I/usr/local/include/tf/bazel-genfiles -I/usr/local/include/tf/tensorflow -I/usr/local/include/tf/third-party
 
-CXX_FLAGS =  -Wall -fPIC -pipe -std=c++14 -fexceptions -O3 -DNDEBUG
+CXX_FLAGS = -O3 -DNDEBUG
 

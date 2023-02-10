@@ -6,7 +6,7 @@ set(EXE_SERVER ${PROJECT_SOURCE_DIR}/Sources/server-test3.cc)
 set(main ${PROJECT_SOURCE_DIR}/main.cpp)
 set(lightgbm_so /usr/local/lib/lib_lightgbm.so)
 set(SLOG_SRC ${PROJECT_SOURCE_DIR}/Lib/Slog.cc)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC -pipe -std=c++14 -fexceptions")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC -pipe -std=c++14 -fexceptions")
 set(LIB ${PROJECT_SOURCE_DIR}/Lib)
 set(DICT ${PROJECT_SOURCE_DIR}/dict)
 set(THREAD_POOL ${PROJECT_SOURCE_DIR}/Pool)
@@ -14,6 +14,17 @@ set(THREAD_POOL_HEAD ${PROJECT_SOURCE_DIR}/util)
 set(LOG_FILE ${CMAKE_CURRENT_SOURCE_DIR}/log)
 set(MODEL_HEAD ${PROJECT_SOURCE_DIR}/model)
 set(GBM_SRC ${PROJECT_SOURCE_DIR}/model/LightGBMPredict.cc)
+#set(CPPJIEBA /home/gaosm/Downloads/cppjieba/include/cppjieba)
+set(TENSORFLOW_INCLUDES
+        /usr/local/include/tf
+        /usr/local/include/tf/bazel-genfiles
+        /usr/local/include/tf/tensorflow
+        /usr/local/include/tf/third-party)
+
+set(TENSORFLOW_LIBS
+        /usr/local/lib/libtensorflow_cc.so
+        /usr/local/lib/libtensorflow_framework.so)
+
 #set(ABN_SRC ${PROJECT_SOURCE_DIR}/model/Abnormal.cc)
 #set(NUMPY_INCLUDE_DIR "/usr/local/lib/python3.6/dist-packages/numpy/core/include/")
 #set(PYLIB "/usr/include/python3.6")
@@ -41,7 +52,7 @@ execute_process( COMMAND ${CMAKE_COMMAND} -E make_directory ${LOG_FILE})
 link_libraries(pthread)
 #link_libraries(memcached)
 #如果不加 提示找不到 fatal error: Slog.h: No such file or directory #include "Slog.h"
-include_directories(${LIB} ${NUMPY_INCLUDE_DIR} ${THREAD_POOL} ${THREAD_POOL_HEAD} ${DICT} ${MODEL_HEAD})
+include_directories(${LIB} ${NUMPY_INCLUDE_DIR} ${THREAD_POOL} ${THREAD_POOL_HEAD} ${DICT} ${MODEL_HEAD} ${CPPJIEBA} ${TENSORFLOW_INCLUDES})
 #include_directories(${LIB} ${NUMPY_INCLUDE_DIR} ${THREAD_POOL} ${THREAD_POOL_HEAD} ${DICT} ${MODEL_HEAD} ${PYLIB})
 #include_directories(${THREAD_POOL_HEAD})
 #include_directories(${DICT})
@@ -50,6 +61,7 @@ include_directories(${LIB} ${NUMPY_INCLUDE_DIR} ${THREAD_POOL} ${THREAD_POOL_HEA
 
 find_package(OpenSSL REQUIRED)
 find_package(wfrest REQUIRED CONFIG HINTS ..)
+find_package(Eigen3 REQUIRED)
 #先找
 find_package(workflow REQUIRED CONFIG HINTS ..)
 #再链接
@@ -79,6 +91,8 @@ endif ()
 link_directories(${LIB})
 link_directories(${MODEL_HEAD})
 find_library (libpath libSlog.a ${LIB})
+INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
+
 #find_path(libp Slog.h ${PROJECT_SOURCE_DIR}/Lib)
 #find_package(Slog REQUIRED)
 message (STATUS "XXXXXXXXXXXXXXXXXXXXXXXXXXXX      ${libpath}")
@@ -90,14 +104,13 @@ endif()
 
 #add_executable(server-test3 ${EXE_SERVER} ${LIBS} ${MODEL_SRC} ${THREAD_POOL} ${DYDICT} ${GLOBAL_DATA} ${THRPL} ${ABN_SRC})
 add_executable(server-test3 ${EXE_SERVER} ${LIBS} ${MODEL_SRC} ${THREAD_POOL} ${DYDICT} ${GLOBAL_DATA} ${THRPL})
-add_executable(main ${main} ${LINEAR_REGRESSION} )
+#add_executable(main ${main} ${LINEAR_REGRESSION} )
 #set(lib_dir ${PROJECT_SOURCE_DIR}/lib)
 ## 拷贝 src文件夹下的内容  到  save_src_dir 中
 #execute_process( COMMAND ${CMAKE_COMMAND} -E copy_directory
 #        ${LOG_LIB}/Slog.a
 #        ${LOG_LIB}/Slog.so
 #        ${lib_dir})
-
-target_link_libraries(server-test3 pthread ${WFREST_LIB} log4cplus ${lightgbm_so} ${PYENV})
+target_link_libraries(server-test3 pthread ${WFREST_LIB} log4cplus ${lightgbm_so} ${PYENV} ${TENSORFLOW_LIBS})
 #target_link_libraries(server-test3 ${LIB}/libSlog.so)
 #target_include_directories(server-test3 PUBLIC ${PROJECT_SOURCE_DIR}/Lib)

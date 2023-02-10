@@ -1,8 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include "model/LinearRegression.h"
-#define CPPHTTPLIB_OPENSSL_SUPPORT
+//#include "Jieba.hpp"
+#include <Eigen/Core>
+#include "tensorflow/core/public/session.h"
+#include "tensorflow/core/platform/env.h"
 
+#define CPPHTTPLIB_OPENSSL_SUPPORT
+using namespace tensorflow;
 double* readFile(std::string fileName) {
     std::ifstream in;
     in.open(fileName);
@@ -18,6 +23,18 @@ double* readFile(std::string fileName) {
     return data;
 }
 int main() {
+    Session* session;
+    Status status = NewSession(SessionOptions(), &session);
+    if(!status.ok()){
+        std::cerr << status.ToString() << std::endl;
+        return 1;
+    } else {
+        std::cout << "Session created successfully" << std::endl;
+    }
+    if (argc != 2) {
+        std::cerr << std::endl << "Usage: ./project path_to_graph.pb" << std::endl;
+        return 1;
+    }
     double alpha = 0.07;
     int iterations = 200;
     double x_predict = 2.1212;

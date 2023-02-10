@@ -20,6 +20,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../util"
   "../dict"
   "../model"
+  "/usr/local/include/tf"
+  "/usr/local/include/tf/bazel-genfiles"
+  "/usr/local/include/tf/tensorflow"
+  "/usr/local/include/tf/third-party"
+  "/usr/local/include/eigen3"
   )
 
 # The set of dependency files which are needed:

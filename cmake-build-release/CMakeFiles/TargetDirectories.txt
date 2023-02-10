@@ -1,5 +1,4 @@
 /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles/server-test3.dir
-/home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles/main.dir
 /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles/edit_cache.dir
 /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles/rebuild_cache.dir
 /home/gaosm/Downloads/dev-1/inforefiner-model/cmake-build-release/CMakeFiles/list_install_components.dir

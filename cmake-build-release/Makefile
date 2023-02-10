@@ -175,19 +175,6 @@ server-test3/fast:
 .PHONY : server-test3/fast
 
 #=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
 # Target rules for targets named Slog_static
 
 # Build rule for target.
@@ -333,30 +320,6 @@ dict/global_data.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/dict/global_data.cc.s
 .PHONY : dict/global_data.cc.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 model/Abnormal.o: model/Abnormal.cc.o
 .PHONY : model/Abnormal.o
 
@@ -411,7 +374,6 @@ model/LinearRegression.o: model/LinearRegression.cc.o
 # target to build an object file
 model/LinearRegression.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.o
 .PHONY : model/LinearRegression.cc.o
 
 model/LinearRegression.i: model/LinearRegression.cc.i
@@ -420,7 +382,6 @@ model/LinearRegression.i: model/LinearRegression.cc.i
 # target to preprocess a source file
 model/LinearRegression.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.i
 .PHONY : model/LinearRegression.cc.i
 
 model/LinearRegression.s: model/LinearRegression.cc.s
@@ -429,7 +390,6 @@ model/LinearRegression.s: model/LinearRegression.cc.s
 # target to generate assembly for a file
 model/LinearRegression.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-test3.dir/build.make CMakeFiles/server-test3.dir/model/LinearRegression.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/LinearRegression.cc.s
 .PHONY : model/LinearRegression.cc.s
 
 # Help Target
@@ -446,7 +406,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Slog"
 	@echo "... Slog_static"
-	@echo "... main"
 	@echo "... server-test3"
 	@echo "... Lib/Slog.o"
 	@echo "... Lib/Slog.i"
@@ -463,9 +422,6 @@ help:
 	@echo "... dict/global_data.o"
 	@echo "... dict/global_data.i"
 	@echo "... dict/global_data.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... model/Abnormal.o"
 	@echo "... model/Abnormal.i"
 	@echo "... model/Abnormal.s"

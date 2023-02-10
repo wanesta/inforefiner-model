@@ -100,6 +100,8 @@ int main(){
                 json_result["scenesClass"] = "forecast";
                 json_result["model"] = "failure-rate";
                 json_result["result"] = res_vec;
+            }else if(){
+
             }else if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore") {
                 Json json_data = req_context["data"];
                 std::vector<std::vector<double>> dataVec;

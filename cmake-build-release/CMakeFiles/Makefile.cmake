@@ -39,6 +39,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/wfrest/wfrest-config.cmake"
   "/usr/local/lib/cmake/workflow/workflow-config-version.cmake"
   "/usr/local/lib/cmake/workflow/workflow-config.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3Config.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3Targets.cmake"
   )
 
 # The corresponding makefile is:
@@ -56,7 +59,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/server-test3.dir/DependInfo.cmake"
-  "CMakeFiles/main.dir/DependInfo.cmake"
   "Lib/CMakeFiles/Slog_static.dir/DependInfo.cmake"
   "Lib/CMakeFiles/Slog.dir/DependInfo.cmake"
   )
