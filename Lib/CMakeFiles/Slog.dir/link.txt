@@ -1,0 +1,1 @@
+/usr/bin/gcc -fPIC  -Wall -fPIC -pipe -std=c++14 -fexceptions -shared -Wl,-soname,libSlog.so -o libSlog.so CMakeFiles/Slog.dir/Slog.cc.o   -L/home/gaosm/wfrest/_lib  -L/usr/local/lib64  -Wl,-rpath,/home/gaosm/wfrest/_lib:/usr/local/lib64: -lpthread 
