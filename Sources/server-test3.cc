@@ -29,7 +29,8 @@ void sig_handler(int signo)
     wait_group.done();
 }
 
-static LightGBMPredict lightgbm = LightGBMPredict();
+static LightGBMPredict lightgbm_failure_rate = LightGBMPredict();
+static LightGBMPredict lightgbm_repair_cost = LightGBMPredict();
 //AbnormalDetect* abnormalDetect = new AbnormalDetect();
 int main(){
     signal(SIGINT, sig_handler);
@@ -38,11 +39,13 @@ int main(){
     cout << "文件路径" << buffer << endl;
 //将需要调用的模块使用 strcat 作拼接;
     const char *model_path = strcat(buffer,"");
-
-    std::cout<< "hhhhhhhhhhhhhhhhhhhhhhhhhhhh" << model_path << std::endl;
-    // /root/inforefiner-model/model-data/LightGBM_model.txt
-    const std::string model_file = "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model.txt";
-    lightgbm.LoadModel(model_file);
+    // /root/inforefiner-model/model-data/LightGBM_model_test.txt   //测试
+    // /root/inforefiner-model/model-data/LightGBM_model_failure_rate.txt   //故障率预测
+    // /root/inforefiner-model/model-data/LightGBM_model_repair_cost.txt  //维修物资成本预测
+    const std::string failure_rate_model_file = "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model_failure_rate.txt";
+    const std::string repair_cost_model_file =  "/home/gaosm/Downloads/dev-1/inforefiner-model/model-data/LightGBM_model_repair_cost.txt";
+    lightgbm_failure_rate.LoadModel(failure_rate_model_file);
+    lightgbm_repair_cost.LoadModel(repair_cost_model_file);
     HttpServer svr;
     //Log.init("/home/gaosm/Downloads/dev-1/inforefiner-model/config/slog.properties");
     Log.init("../config/slog.properties");
@@ -86,37 +89,54 @@ int main(){
             struct tm *stime = localtime(&t);
             printf("predict begin ******** %4d-%02d-%02d %02d/%02d/%2d\n", stime->tm_year + 1900, stime->tm_mon + 1,
                    stime->tm_mday, stime->tm_hour, stime->tm_min, stime->tm_sec);
-            if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast") {
+            if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast" && req_context["model"] == "failure-rate") {
                 Json json_data = req_context["data"];
                 std::vector<std::vector<double>> res_vec;
                 std::cout << "---------------------------------------------------> " << req_context["data"].size()
                           << std::endl;
                 for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                     std::vector<double> row_data = *it;
-                    row_data.push_back(lightgbm.predict(row_data));
+                    row_data.push_back(lightgbm_failure_rate.predict(row_data));
                     res_vec.push_back(row_data);
                     //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
                 }
                 json_result["scenesClass"] = "forecast";
                 json_result["model"] = "failure-rate";
                 json_result["result"] = res_vec;
-            }else if(){
-
-            }else if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore") {
+            }else if(req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "forecast" && req_context["model"] == "repair-cost"){
                 Json json_data = req_context["data"];
-                std::vector<std::vector<double>> dataVec;
+                std::vector<std::vector<double>> res_vec;
+                std::cout << "---------------------------------------------------> " << req_context["data"].size()
+                          << std::endl;
                 for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                     std::vector<double> row_data = *it;
-                    dataVec.push_back(row_data);
+                    row_data.push_back(lightgbm_repair_cost.predict(row_data));
+                    res_vec.push_back(row_data);
                 }
-                int rowcnt = dataVec.size(), colcnt = dataVec[0].size();
-                //abnormalDetect->ModelPredict(dataVec, rowcnt, colcnt);
-                //json_result["result"] = abnormalDetect->getResultVec();
-//            std::vector<int> dvec = std::vector<int>(rowcnt);
-//            ini();
-//            test3(dataVec,rowcnt,colcnt,dvec);
-//            json_result["result"] = dvec;
-                //delete abnormalDetect;
+                json_result["scenesClass"] = "forecast";
+                json_result["model"] = "repair-cost";
+                json_result["result"] = res_vec;
+            }else if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore" && req_context["model"] == "abnormal-detect") {
+                Json json_data = req_context["data"];
+                std::vector<std::vector<int>> dataVec(json_data.size(), vector<int>(json_data[0].size(), 0));
+                std::cout << "   json_data size :" +  json_data.size() << std::endl;
+                int i = 0;
+                for (Json::iterator it = json_data.begin(); it != json_data.end() && i < json_data.size(); ++it,i++) {
+                    std::vector<double> row_data = *it;
+                    double sums = std::accumulate(std::begin(row_data), std::end(row_data), 0.0);
+                    double mean = sums/row_data.size();
+                    std::cout << " = = = = = = = = = = = = " << mean << std::endl;
+                    for(int beg = 0; beg < row_data.size();beg++){
+                        if(row_data[beg] > mean){
+                            dataVec[i][beg] = 1;
+                            //std::cout << " = <<<<<<<< " << i << " >>>>>>>> " << beg << dataVec[i][beg] << std::endl;
+                        }
+                    }
+                }
+
+                json_result["scenesClass"] = "forecast";
+                json_result["model"] = "failure-rate";
+                json_result["result"] = dataVec;
             }else{
                 throw 400;
             }
