@@ -133,10 +133,9 @@ int main(){
                         }
                     }
                 }
-
-                json_result["scenesClass"] = "forecast";
-                json_result["model"] = "failure-rate";
                 json_result["result"] = dataVec;
+                json_result["scenesClass"] = "explore";
+                json_result["model"] = "abnormal-detect";
             }else{
                 throw 400;
             }
