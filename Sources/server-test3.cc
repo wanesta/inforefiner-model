@@ -96,7 +96,7 @@ int main(){
                           << std::endl;
                 for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                     std::vector<double> row_data = *it;
-                    row_data.push_back(lightgbm_failure_rate.predict(row_data));
+                    row_data.push_back(lightgbm_failure_rate.predict(row_data,28));
                     res_vec.push_back(row_data);
                     //std::cout << "                 " << lightgbm.predict(row_data) << '\n';
                 }
@@ -110,7 +110,7 @@ int main(){
                           << std::endl;
                 for (Json::iterator it = json_data.begin(); it != json_data.end(); ++it) {
                     std::vector<double> row_data = *it;
-                    row_data.push_back(lightgbm_repair_cost.predict(row_data));
+                    row_data.push_back(lightgbm_repair_cost.predict(row_data,18));
                     res_vec.push_back(row_data);
                 }
                 json_result["scenesClass"] = "forecast";

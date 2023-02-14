@@ -15,7 +15,7 @@ void LightGBMPredict::LoadModel(const std::string filename) {
         std::cout << "Load Model success ... !" << std::endl;
     }
 }
-const double LightGBMPredict::predict(std::vector<double> &row){
+const double LightGBMPredict::predict(std::vector<double> &row, int col_cnt){
 //    std::vector<float> row = {0.07946399999999999, 0.9537260000000001, 0.9621209999999999, 0.976303, 7.0, 3.0};
 //    for (auto value : row)
 //        std::cout << value << ",";
@@ -25,7 +25,7 @@ const double LightGBMPredict::predict(std::vector<double> &row){
     std::vector<std::vector<double>> rVec;
     double *out_result = static_cast<double *>(out.data());
     int64_t out_len;
-    LGBM_BoosterPredictForMat(this->handle, in_p, C_API_DTYPE_FLOAT32, 1, 28, 1, C_API_PREDICT_NORMAL, 0, -1, "", &out_len, out_result);
+    LGBM_BoosterPredictForMat(this->handle, in_p, C_API_DTYPE_FLOAT32, 1, col_cnt, 1, C_API_PREDICT_NORMAL, 0, -1, "", &out_len, out_result);
     std::cout << "out &&&&&                                 ---- ---------------- "<< std::endl;
     for(auto& r : out){
         std::cout << "out &&&&&" << r << std::endl;
