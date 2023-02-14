@@ -1,5 +1,5 @@
 //
-// Created by root on 9/22/22.
+// Created by root on 9/22/22.   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
 //
 #include "workflow/WFFacilities.h"
 #include <csignal>
@@ -134,9 +134,9 @@ int main(){
                     }
                 }
 
-                json_result["scenesClass"] = "forecast";
-                json_result["model"] = "failure-rate";
                 json_result["result"] = dataVec;
+                json_result["scenesClass"] = "explore";
+                json_result["model"] = "abnormal-detect";
             }else{
                 throw 400;
             }
