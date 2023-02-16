@@ -127,7 +127,7 @@ int main(){
                     double mean = sums/row_data.size();
                     std::cout << " = = = = = = = = = = = = " << mean << std::endl;
                     for(int beg = 0; beg < row_data.size();beg++){
-                        if(row_data[beg] > mean){
+                        if(row_data[beg] > mean * 1.8){
                             dataVec[i][beg] = 1;
                             //std::cout << " = <<<<<<<< " << i << " >>>>>>>> " << beg << dataVec[i][beg] << std::endl;
                         }
