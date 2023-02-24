@@ -119,6 +119,7 @@ int main(){
             }else if (req_context.contains("scenesClass") && req_context.contains("data") && req_context["scenesClass"] == "explore" && req_context["model"] == "abnormal-detect") {
                 Json json_data = req_context["data"];
                 std::vector<std::vector<int>> dataVec(json_data.size(), vector<int>(json_data[0].size(), 0));
+                std::vector<double> mean_vec;
                 std::cout << "   json_data size :" +  json_data.size() << std::endl;
                 int i = 0;
                 for (Json::iterator it = json_data.begin(); it != json_data.end() && i < json_data.size(); ++it,i++) {
@@ -132,10 +133,12 @@ int main(){
                             //std::cout << " = <<<<<<<< " << i << " >>>>>>>> " << beg << dataVec[i][beg] << std::endl;
                         }
                     }
+                    mean_vec.push_back(mean * 1.8);
                 }
                 json_result["result"] = dataVec;
                 json_result["scenesClass"] = "explore";
                 json_result["model"] = "abnormal-detect";
+                json_result["normal"] = mean_vec;
             }else{
                 throw 400;
             }
